@@ -10,13 +10,13 @@ export const Address = () => {
 
             <div className='text-center gap-3'>
 
-                <div className='text-2xl p-1'>Smart Contract Address</div>
+                <div className='text-xl p-1'>Smart Contract Address</div>
 
-                <div className='text-md p-1'>
+                <div className='text-sm p-1'>
                     We are a revolutionary project already existing on four(4) Blockchains with the same smart contract address.
                 </div>
 
-                <div className='flex flex-nowrap m-2 relative place-content-center'>
+                <div className='flex m-2 relative place-content-center'>
 
                     <CopyButton onClick={()=>{
 
@@ -31,19 +31,19 @@ export const Address = () => {
 
                 <div className='my-5 text-sm'>
 
-                    <div className='flex justify-center whitespace-nowrap'>
+                    <div className='flex justify-center flex-wrap'>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2' href='#'>View on Binance SmartChain</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Binance SmartChain</a>
                         
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2' href='#'>View on Huobi Blockchain</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Huobi Blockchain</a>
 
                     </div>
 
-                    <div className='flex justify-center whitespace-nowrap'>
+                    <div className='flex justify-center flex-wrap'>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2' href='#'>View on xDai Mainnet</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on xDai Mainnet</a>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2' href='#'>View on Fantom Opera (FTM)</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Fantom Opera (FTM)</a>
 
                     </div>
 

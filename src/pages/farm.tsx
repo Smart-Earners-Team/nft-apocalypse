@@ -15,11 +15,11 @@ const Farm = () => {
         <title>FarmWithUs</title>
       </Helmet>
 
-      <div className='bg-gradient-to-r from-[#e1f5fb77] to-[#facbd186] dark:from-[#1f3238] dark:to-[#3d0910] dark:text-slate-50'>
+      <div>
 
         <FarmNavbar />
 
-        <div className='my-5 w-50 mx-auto'>
+        <div className='my-5 mx-auto'>
 
           <div className="w-[300px] flex relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto">
 
@@ -51,24 +51,24 @@ const Farm = () => {
 
         </div>
 
-        <div>
+        <div className='w-50 sm:mx-52 mx-auto'>
 
           {/* Card */}
           <div className='mx-5 md:mx-20 my-5 shadow-md'>
 
             <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>Name</div>
                 <div className='text-xl pt-5'>NFTx APO</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>APR</div>
                 <div className='text-xl pt-5'>0.00</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>TVL</div>
                 <div className='text-xl pt-5'>0.000</div>
               </div>
@@ -83,7 +83,7 @@ const Farm = () => {
 
               <div className='inline-flex flex-wrap'>
 
-                <div className='justify-evenly place-self-center sm:flex sm:gap-10 text-sm'>
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
 
                   <div className='sm:flex sm:gap-10'>
                     <div className='px-2 py-2'>
@@ -96,7 +96,7 @@ const Farm = () => {
                     </div>
                   </div>
 
-                  <div className='py-2 whitespace-nowrap'>
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
                     <div className='px-2'>Start Farming</div>
                     <Button title='Connect Wallet' size='small' />
                   </div>
@@ -114,17 +114,17 @@ const Farm = () => {
 
             <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>Name</div>
                 <div className='text-xl pt-5'>NFTx APO</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>APR</div>
                 <div className='text-xl pt-5'>0.00</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>TVL</div>
                 <div className='text-xl pt-5'>0.000</div>
               </div>
@@ -139,7 +139,7 @@ const Farm = () => {
 
               <div className='inline-flex flex-wrap'>
 
-                <div className='justify-evenly place-self-center sm:flex sm:gap-10 text-sm'>
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
 
                   <div className='sm:flex sm:gap-10'>
                     <div className='px-2 py-2'>
@@ -152,7 +152,7 @@ const Farm = () => {
                     </div>
                   </div>
 
-                  <div className='py-2 whitespace-nowrap'>
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
                     <div className='px-2'>Start Farming</div>
                     <Button title='Connect Wallet' size='small' />
                   </div>
@@ -170,17 +170,17 @@ const Farm = () => {
 
             <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>Name</div>
                 <div className='text-xl pt-5'>NFTx APO</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>APR</div>
                 <div className='text-xl pt-5'>0.00</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>TVL</div>
                 <div className='text-xl pt-5'>0.000</div>
               </div>
@@ -195,7 +195,7 @@ const Farm = () => {
 
               <div className='inline-flex flex-wrap'>
 
-                <div className='justify-evenly place-self-center sm:flex sm:gap-10 text-sm'>
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
 
                   <div className='sm:flex sm:gap-10'>
                     <div className='px-2 py-2'>
@@ -208,7 +208,7 @@ const Farm = () => {
                     </div>
                   </div>
 
-                  <div className='py-2 whitespace-nowrap'>
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
                     <div className='px-2'>Start Farming</div>
                     <Button title='Connect Wallet' size='small' />
                   </div>
@@ -226,17 +226,17 @@ const Farm = () => {
 
             <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>Name</div>
                 <div className='text-xl pt-5'>NFTx APO</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>APR</div>
                 <div className='text-xl pt-5'>0.00</div>
               </div>
 
-              <div className=''>
+              <div className='text-slate-800'>
                 <div>TVL</div>
                 <div className='text-xl pt-5'>0.000</div>
               </div>
@@ -251,7 +251,7 @@ const Farm = () => {
 
               <div className='inline-flex flex-wrap'>
 
-                <div className='justify-evenly place-self-center sm:flex sm:gap-10 text-sm'>
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
 
                   <div className='sm:flex sm:gap-10'>
                     <div className='px-2 py-2'>
@@ -264,7 +264,7 @@ const Farm = () => {
                     </div>
                   </div>
 
-                  <div className='py-2 whitespace-nowrap'>
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
                     <div className='px-2'>Start Farming</div>
                     <Button title='Connect Wallet' size='small' />
                   </div>
@@ -277,7 +277,7 @@ const Farm = () => {
 
           </div>
 
-          <Button className="m-auto w-50">View More</Button>
+          <Button className="mx-auto w-50">View More</Button>
 
         </div>
 

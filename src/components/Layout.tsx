@@ -4,7 +4,7 @@ import { Navbar } from './Navigation/Navbar'
 import { Footer } from './Footer'
 
 const Layout = ({ children, ...rest }:any) => (
-    <div {...rest} className="bg-gradient-to-r from-[#e1f5fb77] to-[#facbd186] dark:from-[#1f3238] dark:to-[#3d0910] dark:text-slate-50">
+    <div {...rest}>
         <GlobalStyles />
 
         <Navbar/>

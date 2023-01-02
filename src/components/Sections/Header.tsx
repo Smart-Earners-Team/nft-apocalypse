@@ -1,38 +1,18 @@
 import Button from '../Buttons/Button';
-import React /*{ useState, useEffect }*/ from 'react';
+import * as React from 'react';
 import { Glitch } from '../Tools/GlitchText/GlitchText';
 
 const Header = () => {
 
-    // const [color, setColor] = useState('')
-
-    // useEffect(() => {
-
-    //     const colors = ['inherit', '#DCD5D5', '#ec1f38']
-
-    //     let index = 0;
-
-    //     setInterval(() => {
-
-    //         if (index === colors.length) {
-    //             index = 0;
-    //         }
-    //         setColor(colors[index])
-    //         index++
-    //     }, 1000)
-
-    // }, [])
-
-
     return (
         <div>
 
-            <div className='w-[80%] mx-auto py-7 pl-[30px] md:pl-[150px]'>
+            <div className='w-[80%] mx-auto py-7 pl-[20px] md:pl-[120px]'>
 
-                <div className='text-center md:text-left text-4xl md:text-8xl py-6 whitespace-nowrap overflow-hidden'>
-                    <Glitch text='NFT Apocalypse'/>
+                <div className='text-center md:text-left text-3xl md:text-7xl py-6 whitespace-nowrap overflow-hidden'>
+                    <Glitch text='NFT APOCALYPSE'/>
                 </div>
-                <div className='flex'>
+                <div className='flex md:ml-5'>
                     <div className='mx-1 py-5 flex'>
                         <Button title='Buy NFTx' />
                         <Button variant='secondary' title='Stake NFTx' />

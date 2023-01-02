@@ -8,7 +8,7 @@ export const FarmNavbar = () => {
 
     return (
 
-        <div className='px-[10vw] py-2 shadow-xl'>
+        <div className='px-[10vw] py-2 shadow-xl dark:text-slate-50'>
 
             <div className='float-left pr-[30px] md:pr-0 md:hidden'>
                 <div className="flex items-center gap-2 border border-gray-200 rounded-lg py-3 px-2">
