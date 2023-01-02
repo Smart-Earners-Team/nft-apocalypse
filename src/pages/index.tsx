@@ -21,7 +21,7 @@ export default function IndexPage() {
         <Header/>
         <Intro/>
         <Utility/>
-        {/* <CarouselComp/> */}
+        <CarouselComp/>
         <Airdrops/>
         <ComingSoon/>
       </Layout>

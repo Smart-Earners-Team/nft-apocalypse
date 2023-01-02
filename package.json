@@ -22,6 +22,7 @@
     "@types/react-helmet": "^6.1.6",
     "@types/styled-components": "^5.1.26",
     "clsx": "^1.2.1",
+    "daisyui": "^2.46.1",
     "gatsby": "^5.3.3",
     "gatsby-plugin-google-analytics": "^5.3.0",
     "gatsby-plugin-image": "^3.3.2",
@@ -38,7 +39,6 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
     "react-powerglitch": "^1.0.0",
-    "react-responsive-carousel": "^3.2.23",
     "styled-components": "^5.3.6",
     "theme-ui": "^0.15.4",
     "twin.macro": "^3.1.0"

@@ -1,28 +1,28 @@
 import * as React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import { Address } from './Slides/Address';
 import { Tokenomics } from './Slides/Tokenomics';
 import { Listing } from './Slides/Listing';
 
 export const CarouselComp: React.FC = () => {
     return (
-        <div className='bg-[]'>
-            <Carousel autoPlay interval={3000} infiniteLoop showThumbs={false}>
+        <div>
 
-                <div>
-                    <Tokenomics />
+            <div className="carousel carousel-center w-full p-4 space-x-4">
+
+                <div className="carousel-item">
+                    <Address/>
                 </div>
 
-                <div className='active'>
-                    <Address />
+                <div className="carousel-item">
+                    <Tokenomics/>
                 </div>
 
-                <div>
-                    <Listing />
+                <div className="carousel-item">
+                    <Listing/>
                 </div>
 
-            </Carousel>
+            </div>
+
         </div>
     );
 };
