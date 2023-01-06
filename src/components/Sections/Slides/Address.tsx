@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { CopyButton } from '../../common/styled'
+import Alert from 'theme-ui'
 
 const smartContractAddress = '0xda5dea132f9c30f2f6b513266795fec16426c0c6'
 
@@ -21,7 +22,12 @@ export const Address = () => {
                     <CopyButton onClick={()=>{
 
                         navigator.clipboard.writeText(smartContractAddress)
-                        console.log(smartContractAddress)
+                        console.log(smartContractAddress);
+                        smartContractAddress && (
+                            <div>
+                                Beep boop, this is an alert!
+                            </div>
+                        )
 
                     }}></CopyButton>                    
 

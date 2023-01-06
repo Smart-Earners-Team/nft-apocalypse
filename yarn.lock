@@ -1575,13 +1575,10 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
-"@mdx-js/react@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.2.1.tgz#5a70592418d52b1b01538c37e795034601c96ec5"
-  integrity sha512-YdXcMcEnqZhzql98RNrqYo9cEhTTesBiCclEtoiQUbJwx87q9453GTapYU6kJ8ZZ2ek1Vp25SiAXEFy5O/eAPw==
-  dependencies:
-    "@types/mdx" "^2.0.0"
-    "@types/react" ">=16"
+"@mdx-js/react@v1":
+  version "1.6.22"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.22.tgz#ae09b4744fddc74714ee9f9d6f17a66e77c43573"
+  integrity sha512-TDoPum4SHdfPiGSAaRBw7ECyI8VaHpK8GJugbJIJuqyh6kzw9ZLJZW3HGL3NNrJGxcAixUvqROm+YuQOo5eXtg==
 
 "@mischnic/json-sourcemap@^0.1.0":
   version "0.1.0"
@@ -2179,6 +2176,14 @@
   dependencies:
     csstype "^3.0.10"
 
+"@theme-ui/mdx@^0.15.4":
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/@theme-ui/mdx/-/mdx-0.15.4.tgz#1a5e4a218de91f5abdde2e20e1309d6d19cfd3ee"
+  integrity sha512-pDevKE15T9U/V8WIAvEEx5eXpj3OWn7Y9NRofcWq3VK525lt2v73rXInl7LIOIBa3rB/CTiickQL/YdC84hKoQ==
+  dependencies:
+    "@theme-ui/core" "^0.15.4"
+    "@theme-ui/css" "^0.15.4"
+
 "@theme-ui/theme-provider@^0.15.4":
   version "0.15.4"
   resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.15.4.tgz#5ef3f2d4f8533e77f285385a34911c5435183753"
@@ -2475,7 +2480,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16", "@types/react@^18.0.26":
+"@types/react@*", "@types/react@^18.0.26":
   version "18.0.26"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.26.tgz#8ad59fc01fef8eaf5c74f4ea392621749f0b7917"
   integrity sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==
@@ -5794,6 +5799,11 @@ gatsby-plugin-styled-components@^6.3.0:
   integrity sha512-681My1lKJmnnhyM4MTQWOH2q3BLhkHv3Ft3h64h0IvmMdCxcNqkrp5HmAJA4Ns3XOmgNvRffOm+sLLAULIH9Tg==
   dependencies:
     "@babel/runtime" "^7.15.4"
+
+gatsby-plugin-theme-ui@^0.15.4:
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.15.4.tgz#069a6fe333c1a750aed60ebb3b1e89d3cd62b068"
+  integrity sha512-SlkZ+qWPX2QI+udR9mbZPBKIzyhKmPXDVHWbBLT6mWdK0nj9G16vxQbWvo4ElKaweNojtbZ7/MdchBRPQA8lLQ==
 
 gatsby-plugin-typescript@^5.3.1:
   version "5.3.1"

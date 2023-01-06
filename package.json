@@ -18,7 +18,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mdx-js/react": "^2.2.1",
+    "@mdx-js/react": "v1",
+    "@theme-ui/mdx": "^0.15.4",
     "@types/react-helmet": "^6.1.6",
     "@types/styled-components": "^5.1.26",
     "clsx": "^1.2.1",
@@ -31,6 +32,7 @@
     "gatsby-plugin-sharp": "^5.3.2",
     "gatsby-plugin-sitemap": "^6.3.1",
     "gatsby-plugin-styled-components": "^6.3.0",
+    "gatsby-plugin-theme-ui": "^0.15.4",
     "gatsby-source-filesystem": "^5.3.1",
     "gatsby-transformer-remark": "^6.3.2",
     "gatsby-transformer-sharp": "^5.3.1",

@@ -2,7 +2,7 @@ import React from 'react'
 import { FarmNavbar } from '../components/Navigation/FarmNavbar'
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
-// import ConnectWalletButton from '../components/Buttons/ConnectWalletButton';
+// import ConnectWallettd from '../components/Buttons/ConnectWalletButton';
 import { Footer } from '../components/Footer';
 import Button from '../components/Buttons/Button';
 
@@ -277,11 +277,359 @@ const Farm = () => {
 
           </div>
 
-          <Button className="mx-auto w-50">View More</Button>
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Card */}
+          <div className='mx-5 md:mx-20 my-5 shadow-md'>
+
+            <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+
+              <div className='text-slate-800'>
+                <div>Name</div>
+                <div className='text-xl pt-5'>NFTx APO</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>APR</div>
+                <div className='text-xl pt-5'>0.00</div>
+              </div>
+
+              <div className='text-slate-800'>
+                <div>TVL</div>
+                <div className='text-xl pt-5'>0.000</div>
+              </div>
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-4 h-[auto]'>
+
+              <div className='bg-[#89daf356] p-3 text-center'>
+                <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+              </div>
+
+              <div className='inline-flex flex-wrap'>
+
+                <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
+
+                  <div className='sm:flex sm:gap-10'>
+                    <div className='px-2 py-2'>
+                      <div>Earned</div>
+                      <div className='pt-3'>0.0</div>
+                    </div>
+
+                    <div>
+                      <Button title='Harvest' size='small' variant='secondary' />
+                    </div>
+                  </div>
+
+                  <div className='py-2 whitespace-nowrap align-middle ml-5'>
+                    <div className='px-2'>Start Farming</div>
+                    <Button title='Connect Wallet' size='small' />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Pagination */}
+          <div className="flex justify-center w-full py-2 gap-2">
+            <a href="#previous" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'<'}</a>
+            <a href="#page1" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">1</a>
+            <a href="#page2" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">2</a>
+            <a href="#selectPage" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'...'}</a>
+            <a href="#page10" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">10</a>
+            <a href="#next" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'>'}</a>
+          </div>
 
         </div>
 
-        <Footer />
+        <br/>
+
+        <div className=''>
+          <Footer />
+        </div>
 
       </div>
 

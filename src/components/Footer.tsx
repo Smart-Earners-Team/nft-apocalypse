@@ -9,6 +9,7 @@ export const Footer = () => {
         <div className='border border-slate-100 my-5'/>
 
         <div className='text-center pb-5'>
+          
             <div className='text-5xl md:text-8xl p-5'>NFT APOCALYPSE</div>
             <div className='pt-2'>MultiChain metaverse NFT Platform</div>
 

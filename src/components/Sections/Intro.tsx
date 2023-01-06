@@ -10,14 +10,6 @@ export const Intro = () => {
 
         <div>
             <div className="flex justify-center">
-
-                <div>
-                    <Button title="Buy NFT" size="medium" />
-                    <Button title="Sell NFT" size="medium" />
-                </div>
-
-                <Button title="Swap NFT" size="large" />
-
             </div>
 
             <div className='items-center flex flex-wrap md:flex-nowrap px-10 py-3 gap-5'>
