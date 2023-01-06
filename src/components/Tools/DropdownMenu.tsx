@@ -39,7 +39,7 @@ export const DropdownMenu:React.FC = ({
     return (
         <div ref={ref} className="relative inline-block mt-2">
             <div>
-                <span className="shadow-sm">
+                <span className="shadow-md">
                     <button
                         type="button"
                         className="inline-flex justify-center w-full border-0 px-2 py-2 text-xs leading-5 font-medium text-gray-800 hover:text-gray-700 focus:outline-none focus:border-0 outline-slate-50"

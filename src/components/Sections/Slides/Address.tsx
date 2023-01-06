@@ -13,8 +13,9 @@ export const Address = () => {
 
                 <div className='text-xl p-1'>Smart Contract Address</div>
 
-                <div className='text-sm p-1'>
-                    We are a revolutionary project already existing on four(4) Blockchains with the same smart contract address.
+                <div className='p-1 text-xs'>
+                    We are a revolutionary project already existing on four(4) 
+                    Blockchains with the same smart contract address.
                 </div>
 
                 <div className='flex m-2 relative place-content-center'>
@@ -23,21 +24,15 @@ export const Address = () => {
 
                         navigator.clipboard.writeText(smartContractAddress)
                         console.log(smartContractAddress);
-                        smartContractAddress && (
-                            <div>
-                                Beep boop, this is an alert!
-                            </div>
-                        )
+                    }}/>                   
 
-                    }}></CopyButton>                    
-
-                    <input type={'text'} className='text-center text-xs px-2 py-3 shadow-md outline-none w-[400px] cursor-default bg-transparent hover:shadow-sm' value={smartContractAddress} readOnly />
+                    <input type={'text'} className='text-center text-xs px-2 py-3 shadow-md outline-none w-[400px] cursor-default bg-transparent hover:shadow-lg' value={smartContractAddress} readOnly />
 
                 </div>
 
                 <div className='my-5 text-sm'>
 
-                    <div className='flex justify-center flex-wrap'>
+                    <div className='justify-center flex-wrap py-5 text-xs'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Binance SmartChain</a>
                         
@@ -45,7 +40,7 @@ export const Address = () => {
 
                     </div>
 
-                    <div className='flex justify-center flex-wrap'>
+                    <div className='justify-center flex-wrap py-5 text-xs'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on xDai Mainnet</a>
 

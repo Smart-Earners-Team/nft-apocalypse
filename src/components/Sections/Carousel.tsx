@@ -7,17 +7,17 @@ export const CarouselComp: React.FC = () => {
     return (
         <div>
 
-            <div className="carousel carousel-center slide w-full p-4 space-x-4">
+            <div className="carousel w-full">
 
-                <div id='item1' className="carousel-item">
+                <div id='item1' className="carousel-item whitespace-pre-wrap">
                     <Address/>
                 </div>
 
-                <div id='item2' className="carousel-item">
+                <div id='item2' className="carousel-item whitespace-pre-wrap">
                     <Tokenomics/>
                 </div>
 
-                <div id='item3' className="carousel-item">
+                <div id='item3' className="carousel-item whitespace-pre-wrap">
                     <Listing/>
                 </div>
 
