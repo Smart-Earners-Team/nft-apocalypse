@@ -615,12 +615,12 @@ const Farm = () => {
 
           {/* Pagination */}
           <div className="flex justify-center w-full py-2 gap-2">
-            <a href="#previous" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'<'}</a>
-            <a href="#page1" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">1</a>
-            <a href="#page2" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">2</a>
-            <a href="#selectPage" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'...'}</a>
-            <a href="#page10" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">10</a>
-            <a href="#next" className="btn bg-[#dbe4f2] text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'>'}</a>
+            <a href="#previous" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'<'}</a>
+            <a href="#page1" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">1</a>
+            <a href="#page2" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">2</a>
+            <a href="#selectPage" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'...'}</a>
+            <a href="#page10" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">10</a>
+            <a href="#next" className="btn bg-inherit text-inherit hover:bg-[#dbe4f2] border-[#dbe4c8] btn-xs">{'>'}</a>
           </div>
 
         </div>
