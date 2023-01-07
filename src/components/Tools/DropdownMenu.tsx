@@ -1,20 +1,21 @@
 import React, { useState, useRef } from 'react';
-import { SiBinance, SiEthereum } from 'react-icons/si';
+import { SiBinance, SiChainlink, SiEthereum } from 'react-icons/si';
 
 export const address: undefined = undefined;
 
 const networks = [
-    {address: {address}, network1: <SiBinance/>},
-    {address: {address}, network2: <SiEthereum/>}
+    { networkIcon1: <SiBinance />, network: 'SmartChain' },
+    { networkIcon2: <SiEthereum />, network: 'Ethereum' },
+    { networkIcon3: <SiChainlink/>, network: 'ChainLink' },
 ]
 
-export const DropdownMenu:React.FC = ({
+export const DropdownMenu: React.FC = ({
     connected, address
-} : any) => {
+}: any) => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-    const handleClickOutside = (event:any) => {
+    const handleClickOutside = (event: any) => {
         if (ref.current && ref.current.contains(event.target)) {
             setIsOpen(false);
         }
@@ -42,22 +43,23 @@ export const DropdownMenu:React.FC = ({
                 <span className="shadow-md">
                     <button
                         type="button"
-                        className="inline-flex justify-center w-full border-0 px-2 py-2 text-xs leading-5 font-medium text-gray-800 hover:text-gray-700 focus:outline-none focus:border-0 outline-slate-50"
+                        className="inline-flex justify-center w-full border-0 px-2 py-2 text-sm leading-5 font-medium text-gray-800 hover:text-gray-700 focus:outline-none focus:border-0 outline-slate-50"
                         onClick={handleMenuToggle}
                     >
-                        {connected ? `${address}` : `Select Chain` }
+                        {connected ? `${address}` : `Select Chain`}
                     </button>
                 </span>
             </div>
             {isOpen && (
-                <div className="origin-top-left absolute left-0 text-center mt-0 w-full shadow-lg">
+                <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-full shadow-lg h-auto">
                     <div className="rounded-full">
-                        <div className="py-1">
+                        <div className="py-1 text-xl">
                             {networks.map((val, key) => {
                                 return (
                                     <div key={key}>
-                                        <button>{val.network1}</button>
-                                        <button>{val.network2}</button>
+                                        <button className='py-3'>{val.networkIcon1}</button>
+                                        <button className='py-3'>{val.networkIcon2}</button>
+                                        <button className='py-3'>{val.networkIcon3}</button>
                                     </div>
                                 )
                             })}

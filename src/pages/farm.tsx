@@ -2,7 +2,6 @@ import React from 'react'
 import { FarmNavbar } from '../components/Navigation/FarmNavbar'
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
-// import ConnectWallettd from '../components/Buttons/ConnectWalletButton';
 import { Footer } from '../components/Footer';
 import Button from '../components/Buttons/Button';
 

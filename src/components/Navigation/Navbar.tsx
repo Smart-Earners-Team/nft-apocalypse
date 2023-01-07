@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { LogoImage, MenuSwitcher } from '../common/styled'
 import { topNavItems } from '.'
-import Button from '../Buttons/Button'
 import { DropdownMenu } from '../Tools/DropdownMenu'
 import { BiMenu } from 'react-icons/bi'
 import { RiCloseFill } from 'react-icons/ri'
@@ -13,30 +12,8 @@ export const Navbar = () => {
   return (
     <>
       <div className='px-[10vw] py-2 shadow-xl'>
+
         <div className='float-left pr-[30px] md:pr-0 md:hidden'>
-          <div className="flex items-center gap-2 border border-gray-200 rounded-lg py-3 px-2">
-            <button className="text-gray-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
-            <input
-              type="text"
-              className="w-[80px] outline-none bg-transparent focus:w-[100px] duration-700"
-              placeholder="Search..."
-            />
-          </div>
         </div>
 
         <LogoImage />
@@ -55,6 +32,7 @@ export const Navbar = () => {
           </span>
         </nav>
       </div>
+
       {isMenuOpen && (
         <div
           className='fixed top-0 inset-0 z-50 overflow-y-auto'
