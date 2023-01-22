@@ -30,11 +30,6 @@ const config: GatsbyConfig = {
         isBaseProvider: false,
       },
     }, {
-    resolve: 'gatsby-plugin-theme-ui',
-    options: {
-      preset: require('./src/styles/theme'),
-    },
-  }, {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
       "trackingId": "nft-apocalypse"

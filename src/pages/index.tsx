@@ -17,7 +17,7 @@ export default function IndexPage() {
         <title>NFTX</title>
       </Helmet>
 
-      <Layout>
+      <Layout navbar footer>
         <Header/>
         <Intro/>
         <Utility/>

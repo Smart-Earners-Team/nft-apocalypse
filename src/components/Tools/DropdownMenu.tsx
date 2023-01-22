@@ -56,13 +56,17 @@ export const DropdownMenu: React.FC = ({
             </div>
             
             {isOpen && (
-                <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-full shadow-lg h-auto">
-                    <div className="rounded-full">
+                <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-auto shadow-lg h-auto text-slate-500 text-md">
+                    <div>
                         <div className="py-1 text-xl">
                             {networks.map((val, key) => {
                                 return (
                                     <div key={key}>
-                                        <button className='py-3'>{val.networkIcon}</button>
+                                        <button className='flex align-middle justify-center p-2'>{val.networkIcon} 
+                                            <span className='text-xs pl-2 pt-1'>
+                                                {val.network}
+                                            </span>
+                                        </button>
                                     </div>
                                 )
                             })}

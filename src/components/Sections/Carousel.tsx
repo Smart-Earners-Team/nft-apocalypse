@@ -9,15 +9,15 @@ export const CarouselComp: React.FC = () => {
 
             <div className="carousel w-full">
 
-                <div id='item1' className="carousel-item whitespace-pre-wrap">
+                <div id='item1' className="carousel-item">
                     <Address/>
                 </div>
 
-                <div id='item2' className="carousel-item whitespace-pre-wrap">
+                <div id='item2' className="carousel-item">
                     <Tokenomics/>
                 </div>
 
-                <div id='item3' className="carousel-item whitespace-pre-wrap">
+                <div id='item3' className="carousel-item">
                     <Listing/>
                 </div>
 

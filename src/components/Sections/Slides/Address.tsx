@@ -5,18 +5,18 @@ import { GlobalVariables } from '../../../globals/index';
 export const Address = () => {
 
     return (
-        <div className='px-10 py-3 gap-5 my-5'>
+        <div className='px-10 py-3 gap-5 my-5 w-screen'>
 
             <div className='text-center gap-3'>
 
-                <div className='text-xl p-1'>Smart Contract Address</div>
+                <div className='p-1'>Smart Contract Address</div>
 
-                <div className='p-1 text-xs'>
+                <div className='p-1'>
                     We are a revolutionary project already existing on four(4) 
                     Blockchains with the same smart contract address.
                 </div>
 
-                <div className='flex m-2 relative place-content-center'>
+                <div className='flex m-2 relative place-content-center z-52'>
 
                     <CopyButton copy={GlobalVariables.smartContractAddress}/>                 
 
@@ -26,7 +26,7 @@ export const Address = () => {
 
                 <div className='my-5 text-sm'>
 
-                    <div className='justify-center flex-wrap py-5 text-xs'>
+                    <div className='justify-center flex-wrap py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Binance SmartChain</a>
                         
@@ -34,7 +34,7 @@ export const Address = () => {
 
                     </div>
 
-                    <div className='justify-center flex-wrap py-5 text-xs'>
+                    <div className='justify-center flex-wrap py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on xDai Mainnet</a>
 
