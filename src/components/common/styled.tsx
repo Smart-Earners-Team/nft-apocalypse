@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { StaticImage } from "gatsby-plugin-image";
-import { GlobalTypes } from '../../globals';
+import { GlobalTypes, GlobalVariables } from '../../globals';
 import styled from 'styled-components';
 import { RiFileCopy2Fill } from 'react-icons/ri'
+import { useToast } from '@chakra-ui/react'
 
 export const Error404Image = () => {
 
@@ -63,19 +64,28 @@ export const MediaIcon: React.FC<GlobalTypes> = (
 }
 
 export const CopyButton:React.FC<GlobalTypes> = ({
-    onClick
+    copy
 }) => {
 
+    const toast = useToast()
+
     return(
-        <main>
-            <button onClick={onClick}><RiFileCopy2Fill className='absolute top-3 left-auto ml-3 text-xl' /></button>
-            <div id='alert' className='hidden'>Hello</div>
-        </main>
+        <div>
+            <button onClick={() =>
+                toast({
+                    title: 'Copied!',
+                    position: 'bottom-right',
+                    status: 'success',
+                    isClosable: false,
+                })}><RiFileCopy2Fill className='absolute top-3 left-auto ml-3 text-xl' onClick={()=>
+                    navigator.clipboard.writeText(`${copy}`) 
+                }/></button>
+        </div>
     )
 
 }
 
-export const ThemeSwitcher = () => {
+export const HamburgerIcon = () => {
     return(
         <label className="mx-1 btn btn-circle border-0 hover:border-0 bg-inherit text-inherit hover:bg-inherit swap swap-rotate">
 

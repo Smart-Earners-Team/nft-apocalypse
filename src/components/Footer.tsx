@@ -14,11 +14,12 @@ export const Footer = () => {
             <div className='pt-2'>MultiChain metaverse NFT Platform</div>
 
             <div>
-                <MediaIcon name={<SiGmail />} href='#' target='_blank' className='text-2xl duration-300'/>
+              
+              <MediaIcon name={<SiGmail />} href='#' target='_blank' className='text-2xl duration-300'/>
 
-                <MediaIcon name={<SiTelegram />} href='#' target='_blank' className='text-2xl duration-300'/>
+              <MediaIcon name={<SiTelegram />} href='#' target='_blank' className='text-2xl duration-300'/>
 
-                <MediaIcon name={<SiTwitter />} href='#' target='_blank' className='text-2xl duration-300'/>
+              <MediaIcon name={<SiTwitter />} href='#' target='_blank' className='text-2xl duration-300'/>
 
             </div>
 

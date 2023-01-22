@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { CopyButton } from '../../common/styled'
-import Alert from 'theme-ui'
-
-const smartContractAddress = '0xda5dea132f9c30f2f6b513266795fec16426c0c6'
+import { GlobalVariables } from '../../../globals/index';
 
 export const Address = () => {
 
@@ -20,13 +18,9 @@ export const Address = () => {
 
                 <div className='flex m-2 relative place-content-center'>
 
-                    <CopyButton onClick={()=>{
+                    <CopyButton copy={GlobalVariables.smartContractAddress}/>                 
 
-                        navigator.clipboard.writeText(smartContractAddress)
-                        console.log(smartContractAddress);
-                    }}/>                   
-
-                    <input type={'text'} className='text-center text-xs px-2 py-3 shadow-md outline-none w-[400px] cursor-default bg-transparent hover:shadow-lg' value={smartContractAddress} readOnly />
+                    <input type={'text'} className='text-center text-xs px-2 py-3 shadow-md outline-none w-[400px] cursor-default bg-transparent hover:shadow-lg' value={GlobalVariables.smartContractAddress} readOnly />
 
                 </div>
 

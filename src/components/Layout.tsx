@@ -1,9 +1,10 @@
 import React from 'react'
 import { Navbar } from './Navigation/Navbar'
 import { Footer } from './Footer'
+import { AppWrapper } from './AppWrapper';
 
-const Layout = ({ children, ...rest }:any) => (
-    <div {...rest}>
+const Layout = ( {children}:any ) => (
+    <AppWrapper>
 
         <Navbar/>
 
@@ -11,7 +12,7 @@ const Layout = ({ children, ...rest }:any) => (
 
         <Footer/>
 
-    </div>
+    </AppWrapper>
 )
 
 export default Layout
