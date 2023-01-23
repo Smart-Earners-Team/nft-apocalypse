@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { SiBinance, SiChainlink, SiEthereum } from 'react-icons/si';
+import useActiveWeb3React from '../../hooks/useActiveWeb3React';
+import { useAppContext } from '../../hooks/useAppContext';
+import useWallet from '../../hooks/useWallet';
 
 export const address: undefined = undefined;
 
@@ -14,6 +17,20 @@ export const DropdownMenu: React.FC = ({
 }: any) => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+
+    const {
+      krlWallet: { active, error, retry, isConnecting },
+    } = useAppContext();
+  const { account } = useActiveWeb3React();
+
+
+    const {onPresentConnectModal} = useWallet();
+
+    const openModal = (net:any) => {
+        // handleNetworkSwitch(net)
+        console.log(net)
+        onPresentConnectModal();
+      };
 
     const network = {
         polygon: {
@@ -127,7 +144,7 @@ export const DropdownMenu: React.FC = ({
                             {networks.map((val, key) => {
                                 return (
                                     <div key={key}>
-                                        <button onClick={()=>handleNetworkSwitch(`${val.name}`)} className='flex align-middle justify-center p-2'>{val.networkIcon} 
+                                        <button onClick={()=>openModal(`${val.name}`)} className='flex align-middle justify-center p-2'>{val.networkIcon} 
                                             <span className='text-xs pl-2 pt-1'>
                                                 {val.network}
                                             </span>
