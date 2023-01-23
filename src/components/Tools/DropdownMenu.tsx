@@ -6,7 +6,7 @@ export const address: undefined = undefined;
 const networks = [
     { networkIcon: <SiBinance />, network: 'SmartChain' },
     { networkIcon: <SiEthereum />, network: 'Ethereum' },
-    { networkIcon: <SiChainlink/>, network: 'ChainLink' },
+    { networkIcon: <SiChainlink />, network: 'ChainLink' },
 ]
 
 export const DropdownMenu: React.FC = ({
@@ -39,6 +39,7 @@ export const DropdownMenu: React.FC = ({
 
     return (
         <div ref={ref} className="relative inline-block mt-2">
+
             <div>
 
                 <span className="shadow-md">

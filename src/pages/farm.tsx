@@ -104,7 +104,7 @@ const Farm = () => {
 
             </div>
 
-          </div> flex-wrap
+          </div>
 
           {/* Card */}
           <div className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>

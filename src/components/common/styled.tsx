@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StaticImage } from "gatsby-plugin-image";
-import { GlobalTypes, GlobalVariables } from '../../globals';
+import { GlobalTypes } from '../../globals';
 import styled from 'styled-components';
 import { RiFileCopy2Fill } from 'react-icons/ri'
 import { useToast } from '@chakra-ui/react'
@@ -64,7 +64,7 @@ export const MediaIcon: React.FC<GlobalTypes> = (
 }
 
 export const CopyButton:React.FC<GlobalTypes> = ({
-    copy
+    onClick
 }) => {
 
     const toast = useToast()
@@ -77,9 +77,7 @@ export const CopyButton:React.FC<GlobalTypes> = ({
                     position: 'bottom-right',
                     status: 'success',
                     isClosable: false,
-                })}><RiFileCopy2Fill className='absolute top-3 left-auto ml-3 text-xl' onClick={()=>
-                    navigator.clipboard.writeText(`${copy}`) 
-                }/></button>
+                })}><RiFileCopy2Fill className='absolute top-3 left-auto ml-3 text-xl' onClick={onClick}/></button>
         </div>
     )
 

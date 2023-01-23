@@ -12,7 +12,6 @@ export interface GlobalTypes {
     info?: boolean | undefined,
     warning?: boolean | undefined,
     onClick?: MouseEventHandler,
-    copy?: string | undefined,
     navbar?: boolean,
     farmNavbar?: boolean,
     footer?: boolean,
