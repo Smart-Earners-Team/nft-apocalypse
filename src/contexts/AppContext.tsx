@@ -9,8 +9,7 @@ import { useInactiveListener } from "../hooks/useInactiveListener";
 import useQuery from "../hooks";
 import { isAddress } from "../utils";
 import { NULL_ADDRESS } from "../config/constants";
-import { addUserAddressToHashTable, getAddressFromParams } from "../lib/hashAddress";
-import { useUserId } from "../state/user/hooks";
+import { getAddressFromParams } from "../lib/hashAddress";
 
 export interface GlobalAppContext {
   krlWallet: {
@@ -44,8 +43,7 @@ export default function AppContext({ children }: { children: React.ReactNode }) 
   // Refferal
   const [refAddress, setRefAddress] = useState(NULL_ADDRESS);
   const refFromParams = useQuery().get("ul");
-  // User ID
-  const [, setUserId] = useUserId();
+ 
 
   useEffect(() => {
     if (active) {
@@ -87,16 +85,6 @@ export default function AppContext({ children }: { children: React.ReactNode }) 
       setRefAddress(NULL_ADDRESS);
     }
   }, [refFromParams]);
-
-  // Update User Id
-  useEffect(() => {
-    const setAddress = async function () {
-      if (account) {
-        await addUserAddressToHashTable(account, ({ hash }) => setUserId(hash));
-      }
-    };
-    setAddress();
-  }, [account, setUserId]);
 
   const handleRetry = () => {
     setIsConnecting(false);

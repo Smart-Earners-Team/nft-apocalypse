@@ -27,8 +27,8 @@ export const DropdownMenu: React.FC = ({
     const {onPresentConnectModal} = useWallet();
 
     const openModal = (net:any) => {
-        // handleNetworkSwitch(net)
-        console.log(net)
+        handleNetworkSwitch(net)
+        // console.log(net)
         onPresentConnectModal();
       };
 
