@@ -4,9 +4,9 @@ import { SiBinance, SiChainlink, SiEthereum } from 'react-icons/si';
 export const address: undefined = undefined;
 
 const networks = [
-    { networkIcon: <SiBinance />, network: 'SmartChain' },
-    { networkIcon: <SiEthereum />, network: 'Ethereum' },
-    { networkIcon: <SiChainlink/>, network: 'ChainLink' },
+    { networkIcon: <SiBinance />, network: 'SmartChain', name: 'bsc' },
+    { networkIcon: <SiEthereum />, network: 'Ethereum', name: "polygon" },
+    { networkIcon: <SiChainlink/>, network: 'ChainLink', name: 'cro' },
 ]
 
 export const DropdownMenu: React.FC = ({
@@ -15,8 +15,47 @@ export const DropdownMenu: React.FC = ({
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
+    const network = {
+        polygon: {
+          chainId: `0x${Number(137).toString(16)}`,
+          chainName: "Polygon Mainnet",
+          nativeCurrency: {
+            name: "MATIC",
+            symbol: "MATIC",
+            decimals: 18
+          },
+          rpcUrls: ["https://polygon-rpc.com/"],
+          blockExplorerUrls: ["https://polygonscan.com/"]
+        },
+        bsc: {
+          chainId: `0x${Number(56).toString(16)}`,
+          chainName: "Binance Smart Chain Mainnet",
+          nativeCurrency: {
+            name: "Binance Chain Native Token",
+            symbol: "BNB",
+            decimals: 18
+          },
+          rpcUrls: [
+            "https://bsc-dataseed1.binance.org",
+            "https://bsc-dataseed2.binance.org",
+            "https://bsc-dataseed3.binance.org",
+            "https://bsc-dataseed4.binance.org",
+            "https://bsc-dataseed1.defibit.io",
+            "https://bsc-dataseed2.defibit.io",
+            "https://bsc-dataseed3.defibit.io",
+            "https://bsc-dataseed4.defibit.io",
+            "https://bsc-dataseed1.ninicoin.io",
+            "https://bsc-dataseed2.ninicoin.io",
+            "https://bsc-dataseed3.ninicoin.io",
+            "https://bsc-dataseed4.ninicoin.io",
+            "wss://bsc-ws-node.nariox.org"
+          ],
+          blockExplorerUrls: ["https://bscscan.com"]
+        }
+      };
+
     const handleClickOutside = (event: any) => {
-        if (ref.current && ref.current.contains(event.target)) {
+        if (ref.current && !ref.current.contains(event.target)) {
             setIsOpen(false);
         }
     };
@@ -24,6 +63,32 @@ export const DropdownMenu: React.FC = ({
     const handleMenuToggle = () => {
         setIsOpen(!isOpen);
     };
+
+    const changeNetwork = async (networkName:any) => {
+        try {
+            if (!window.ethereum) throw new Error("No crypto wallet found");
+            await window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [
+                ...network[networkName]
+                ]
+              });
+        } catch (err:any) {
+            console.log("Error message: " + err.message);
+          await window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [
+              {
+                ...network[networkName]
+              }
+            ]
+          });
+        }
+      };
+
+      const handleNetworkSwitch = async (networkName:any) => {
+        await changeNetwork(networkName);
+      };
 
     React.useEffect(() => {
         if (isOpen) {
@@ -62,7 +127,7 @@ export const DropdownMenu: React.FC = ({
                             {networks.map((val, key) => {
                                 return (
                                     <div key={key}>
-                                        <button className='flex align-middle justify-center p-2'>{val.networkIcon} 
+                                        <button onClick={()=>handleNetworkSwitch(`${val.name}`)} className='flex align-middle justify-center p-2'>{val.networkIcon} 
                                             <span className='text-xs pl-2 pt-1'>
                                                 {val.network}
                                             </span>
