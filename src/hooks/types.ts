@@ -1,0 +1,1 @@
+export type Networks = "polygon" | "bsc" | "cronos";

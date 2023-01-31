@@ -3,6 +3,7 @@ import React from "react";
 import MoreHorizontal from "../../Svg/Icons/MoreHorizontal";
 import { connectorLocalStorageKey, walletLocalStorageKey } from "./config";
 import { Login, Config, ConnectorNames } from "./types";
+import useNetworkSelectorContext from "../../../hooks/useNetworkSelectorContext";
 
 interface Props {
   walletConfig: Config;
@@ -33,6 +34,7 @@ const WalletCard = ({
   isConnecting,
 }: Props) => {
   const { title, icon: Icon } = walletConfig;
+  const {networkName} = useNetworkSelectorContext();
 
   return (
     <button
@@ -44,9 +46,9 @@ const WalletCard = ({
 
         // Since iOS does not support Trust Wallet we fall back to WalletConnect
         if (walletConfig.title === "Trust Wallet" && isIOS) {
-          login(ConnectorNames.WalletConnect);
+          login(ConnectorNames.WalletConnect, networkName);
         } else {
-          login(walletConfig.connectorId);
+          login(walletConfig.connectorId, networkName);
         }
 
         localStorage.setItem(walletLocalStorageKey, walletConfig.title);

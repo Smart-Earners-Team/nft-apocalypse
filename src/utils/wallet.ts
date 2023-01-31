@@ -1,34 +1,35 @@
-// viewed
 import { BAD_SRCS } from "../components/Logo/index";
-import { BASE_BSC_SCAN_URL } from "../config/constants";
+import type { SetupNetworkArgs } from "./types";
 
-import getRpcUrl from "./getRpcUrl";
 
 /**
  * Prompt the user to add BSC as a network on Metamask, or switch to BSC if the wallet is on a different network
  * @returns {boolean} true if the setup succeeded, false otherwise
  */
-export const setupNetwork = async () => {
+export const setupNetwork = async ({
+  chainId,
+  networkName,
+  nativeCurrency,
+  rpcUrls,
+  blockExplorerUrls,
+}: SetupNetworkArgs) => {
   const provider = window.ethereum;
   if (provider) {
-    const chainId = parseInt(process.env.GATSBY_CHAIN_ID!, 10);
     try {
       if (!provider.request)
-        throw new Error("Can't setup the BSC network on metamask because window.ethereum.request is undefined");
+        throw new Error(
+          `Can't setup the ${networkName} network on metamask because window.ethereum.request is undefined`
+        );
 
       await provider.request({
         method: "wallet_addEthereumChain",
         params: [
           {
             chainId: `0x${chainId.toString(16)}`,
-            chainName: "Binance Smart Chain Mainnet",
-            nativeCurrency: {
-              name: "BNB",
-              symbol: "BNB",
-              decimals: 18,
-            },
-            rpcUrls: [getRpcUrl()],
-            blockExplorerUrls: [`${BASE_BSC_SCAN_URL}/`],
+            chainName: networkName,
+            nativeCurrency,
+            rpcUrls,
+            blockExplorerUrls,
           },
         ],
       });
@@ -38,7 +39,9 @@ export const setupNetwork = async () => {
       return false;
     }
   } else {
-    console.error("Can't setup the BSC network on metamask because window.ethereum is undefined");
+    console.error(
+      `Can't setup the ${networkName} network on metamask because window.ethereum.request is undefined`
+    );
     return false;
   }
 };
@@ -54,10 +57,14 @@ export const registerToken = async (
   tokenAddress: string,
   tokenSymbol: string,
   tokenDecimals: number,
-  tokenLogo?: string,
+  tokenLogo?: string
 ) => {
   // better leave this undefined for default image instead of broken image url
-  const image = tokenLogo ? (BAD_SRCS[tokenLogo] ? undefined : tokenLogo) : undefined;
+  const image = tokenLogo
+    ? BAD_SRCS[tokenLogo]
+      ? undefined
+      : tokenLogo
+    : undefined;
 
   const tokenAdded =
     window.ethereum?.request &&

@@ -11,12 +11,10 @@ import { ComingSoon } from '../components/Sections/Coming';
 export default function IndexPage() {
   return (
     <React.Fragment>
-
       <Helmet>
         <link rel="icon" href="../images/icon.png" />
         <title>NFTX</title>
       </Helmet>
-
       <Layout navbar footer>
         <Header/>
         <Intro/>
@@ -25,7 +23,6 @@ export default function IndexPage() {
         <Airdrops/>
         <ComingSoon/>
       </Layout>
-
     </React.Fragment>
   )
 }
