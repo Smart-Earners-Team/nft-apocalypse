@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import * as Path from "path"
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -10,6 +11,13 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: Path.resolve("./src/components/GlobalAppWrapper.tsx"),
+      },
+    },
+
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
