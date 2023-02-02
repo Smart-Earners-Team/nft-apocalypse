@@ -1,5 +1,5 @@
 import { BAD_SRCS } from "../components/Logo/index";
-import type { SetupNetworkArgs } from "./types";
+import type { SetupNetworkArgs } from "../config/constants/types";
 
 
 /**

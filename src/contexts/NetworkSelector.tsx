@@ -1,41 +1,40 @@
 import { BscConnector } from "@binance-chain/bsc-connector";
 import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-import React, { createContext, useCallback, useState } from "react";
+import React, { createContext, useCallback, useMemo, useState } from "react";
 import { ConnectorNames } from "../components/widgets/WalletModal/types";
 import { ethers } from "ethers";
 import { Networks } from "../hooks/types";
+import { Web3Provider } from '@ethersproject/providers';
 
 interface NetworkSelectorType {
-  chainId: number;
-  setChainId: React.Dispatch<React.SetStateAction<number>>;
   getWalletConnect: () => void;
   getInjectedConnector: () => void;
   getBscConnector: () => void;
-  networkName: Networks;
-  setNetworkName: React.Dispatch<React.SetStateAction<Networks>>;
   getLibrary: (
     provider:
       | ethers.providers.ExternalProvider
       | ethers.providers.JsonRpcFetchFunc
   ) => ethers.providers.Web3Provider;
-  setRpcUrl: React.Dispatch<React.SetStateAction<string>>;
   connectorsByName: {
     injected: any;
     walletconnect: any;
     bsc: any;
   };
+  networkInfo: NetworkInfo;
+  setNetworkInfo: React.Dispatch<React.SetStateAction<NetworkInfo>>;
+}
+
+interface NetworkInfo {
+  chainId: number;
+  networkName: Networks;
+  rpcUrl: string;
 }
 
 const defaultValues: NetworkSelectorType = {
-  chainId: 25,
-  setChainId() {},
   getWalletConnect: function (): void {},
   getInjectedConnector: function (): void {},
   getBscConnector: function (): void {},
-  networkName: "polygon",
-  setNetworkName: function (_value: React.SetStateAction<Networks>): void {},
-  setRpcUrl: function (_value: React.SetStateAction<string>): void {},
   getLibrary: function (
     provider:
       | ethers.providers.ExternalProvider
@@ -48,23 +47,26 @@ const defaultValues: NetworkSelectorType = {
     walletconnect: undefined,
     bsc: undefined,
   },
+  networkInfo: {
+    chainId: 137,
+    rpcUrl: "https://polygon-rpc.com/",
+    networkName: "polygon",
+  },
+  setNetworkInfo: function (_value: React.SetStateAction<NetworkInfo>): void {},
 };
 
 const POLLING_INTERVAL = 6000;
 export const NetworkSelectorContext = createContext(defaultValues);
 
 function NetworkSelectorProvider({ children }: { children: React.ReactNode }) {
-  const [chainId, setChainId] = useState(137);
-  const [rpcUrl, setRpcUrl] = useState("https://polygon-rpc.com/");
-  const [networkName, setNetworkName] = useState<Networks>("polygon");
-
-/*   const [networkInfo, setNetworkInfo] = useState({
+  const [networkInfo, setNetworkInfo] = useState<NetworkInfo>({
     chainId: 137,
     rpcUrl: "https://polygon-rpc.com/",
-    networkName: "polygon"
-  }) */
+    networkName: "polygon",
+  });
 
   const getWalletConnect = useCallback(() => {
+    const { chainId, rpcUrl } = networkInfo;
     const walletconnect = new WalletConnectConnector({
       rpc: { [chainId]: rpcUrl },
       // @ts-ignore
@@ -73,21 +75,23 @@ function NetworkSelectorProvider({ children }: { children: React.ReactNode }) {
       chainId: chainId,
     });
     return walletconnect;
-  }, [chainId, rpcUrl]);
+  }, [networkInfo]);
 
   const getInjectedConnector = useCallback(() => {
+    const chainId = networkInfo.chainId;
     return new InjectedConnector({ supportedChainIds: [chainId] });
-  }, [chainId]);
+  }, [networkInfo.chainId]);
 
   const getBscConnector = useCallback(() => {
+    const chainId = networkInfo.chainId;
     return new BscConnector({ supportedChainIds: [chainId] });
-  }, [chainId]);
+  }, [networkInfo.chainId]);
 
-  const connectorsByName: { [connectorName in ConnectorNames]: any } = {
+  const connectorsByName: { [connectorName in ConnectorNames]: any } = useMemo(() =>({
     [ConnectorNames.Injected]: getInjectedConnector(),
     [ConnectorNames.WalletConnect]: getWalletConnect(),
     [ConnectorNames.BSC]: getBscConnector(),
-  };
+  }), [getInjectedConnector, getBscConnector, getWalletConnect]);
 
   const getLibrary = useCallback(
     (
@@ -95,26 +99,27 @@ function NetworkSelectorProvider({ children }: { children: React.ReactNode }) {
         | ethers.providers.ExternalProvider
         | ethers.providers.JsonRpcFetchFunc
     ): ethers.providers.Web3Provider => {
-      const library = new ethers.providers.Web3Provider(provider);
+      const {chainId} = networkInfo;
+      console.log(chainId, "FRomgetlib")
+
+      const library = new Web3Provider(provider, chainId);
+      // const library = new ethers.providers.Web3Provider(provider);
       library.pollingInterval = POLLING_INTERVAL;
       return library;
     },
-    []
+    [networkInfo]
   );
 
   return (
     <NetworkSelectorContext.Provider
       value={{
-        chainId,
-        setChainId,
         getWalletConnect,
         getInjectedConnector,
         getBscConnector,
-        networkName,
-        setNetworkName,
         getLibrary,
-        setRpcUrl,
         connectorsByName,
+        networkInfo,
+        setNetworkInfo,
       }}
     >
       {children}

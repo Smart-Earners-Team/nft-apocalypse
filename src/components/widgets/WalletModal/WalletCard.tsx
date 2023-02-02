@@ -34,8 +34,8 @@ const WalletCard = ({
   isConnecting,
 }: Props) => {
   const { title, icon: Icon } = walletConfig;
-  const {networkName} = useNetworkSelectorContext();
-
+  const {networkInfo} = useNetworkSelectorContext();
+  
   return (
     <button
       className="flex items-center flex-col h-auto justify-center mx-auto disabled:opacity-60 disabled:cursor-not-allowed hover:opacity-90 hover:scale-110 transition-all duration-300"
@@ -46,9 +46,9 @@ const WalletCard = ({
 
         // Since iOS does not support Trust Wallet we fall back to WalletConnect
         if (walletConfig.title === "Trust Wallet" && isIOS) {
-          login(ConnectorNames.WalletConnect, networkName);
+          login(ConnectorNames.WalletConnect, networkInfo.networkName);
         } else {
-          login(walletConfig.connectorId, networkName);
+          login(walletConfig.connectorId, networkInfo.networkName);
         }
 
         localStorage.setItem(walletLocalStorageKey, walletConfig.title);

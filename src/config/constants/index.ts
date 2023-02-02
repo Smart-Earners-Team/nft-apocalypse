@@ -4,6 +4,8 @@ import { Percent } from "../entities/fractions/percent";
 import { Token } from "../entities/token";
 import { mainnetTokens, testnetTokens } from "./tokens";
 import { Address, RecognizedChainId } from "./types";
+import type { Networks } from "../../hooks/types";
+import type { SetupNetworkArgs } from "./types";
 
 export enum ChainId {
   MAINNET = 56,
@@ -88,35 +90,57 @@ export const addresses: { [index: string]: Address } = {
 
 export const RecognizedChainIdList: RecognizedChainId[] = [1, 2, 3, 4, 42, 56, 97];
 
-export const networkList = {
-  1: {
-    url: "https://etherscan.io/",
-    name: "Ethereum Mainnet",
+export const networkLists: Partial<{ [key in Networks]: SetupNetworkArgs }> = {
+  polygon: {
+    id: "polygon",
+    chainId: 137,
+    networkName: "Polygon Mainnet",
+    nativeCurrency: {
+      name: "MATIC",
+      symbol: "MATIC",
+      decimals: 18,
+    },
+    rpcUrls: ["https://polygon-rpc.com/"],
+    blockExplorerUrls: ["https://polygonscan.com/"],
   },
-  2: {
-    url: "https://mordenexplorer.ethernode.io/",
-    name: "Morden",
+  bsc: {
+    id: "bsc",
+    chainId: 56,
+    networkName: "Binance Smart Chain Mainnet",
+    nativeCurrency: {
+      name: "Binance Chain Native Token",
+      symbol: "BNB",
+      decimals: 18,
+    },
+    rpcUrls: [
+      "https://bsc-dataseed1.binance.org",
+      "https://bsc-dataseed2.binance.org",
+      "https://bsc-dataseed3.binance.org",
+      "https://bsc-dataseed4.binance.org",
+      "https://bsc-dataseed1.defibit.io",
+      "https://bsc-dataseed2.defibit.io",
+      "https://bsc-dataseed3.defibit.io",
+      "https://bsc-dataseed4.defibit.io",
+      "https://bsc-dataseed1.ninicoin.io",
+      "https://bsc-dataseed2.ninicoin.io",
+      "https://bsc-dataseed3.ninicoin.io",
+      "https://bsc-dataseed4.ninicoin.io",
+      "wss://bsc-ws-node.nariox.org",
+    ],
+    blockExplorerUrls: ["https://bscscan.com"],
   },
-  3: {
-    url: "https://ropsten.etherscan.io/",
-    name: "Ropsten",
-  },
-  4: {
-    url: "https://rinkeby.etherscan.io/",
-    name: "Rinkeby",
-  },
-  42: {
-    url: "https://kovan.etherscan.io/",
-    name: "Kovan",
-  },
-  56: {
-    url: "https://bsc-dataseed.binance.org/",
-    name: "Binance Smart Chain",
-  },
-  97: {
-    url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-    name: "Binance Smart Chain - Testnet",
-  },
+  cronos: {
+    id: "cronos",
+    chainId: 25,
+    networkName: "Cronos",
+    nativeCurrency: {
+      name: "Cronos Token",
+      symbol: "CRO",
+      decimals: 18
+    },
+    rpcUrls: ["https://evm.cronos.org/"],
+    blockExplorerUrls: ["https://chain.crypto.com/"]
+  }
 };
 
 export const ZERO_PERCENT = new Percent("0");

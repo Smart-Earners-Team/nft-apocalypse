@@ -1,14 +1,18 @@
 import React, { useState, useRef } from "react";
 import { SiBinance, SiChainlink } from "react-icons/si";
-import useActiveWeb3React from "../../hooks/useActiveWeb3React";
-import useWallet from "../../hooks/useWallet";
+import useAuthWallet from "../../hooks/useWallet";
 import { Networks } from "../../hooks/types";
 import { BiPolygon } from "react-icons/bi";
 import useNetworkSelectorContext from "../../hooks/useNetworkSelectorContext";
+import { networkLists } from "../../config/constants";
 
 export const address: undefined = undefined;
 
-const networks: {networkIcon: JSX.Element, network: string; name: Networks}[] = [
+const networks: {
+  networkIcon: JSX.Element;
+  network: string;
+  name: Networks;
+}[] = [
   { networkIcon: <SiBinance />, network: "SmartChain", name: "bsc" },
   { networkIcon: <BiPolygon />, network: "Polygon", name: "polygon" },
   { networkIcon: <SiChainlink />, network: "Cronos", name: "cronos" },
@@ -18,21 +22,18 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const {setNetworkName} = useNetworkSelectorContext();
+  const { setNetworkInfo } = useNetworkSelectorContext();
 
-
-  const { account } = useActiveWeb3React();
-
-  const { onPresentConnectModal, setChainId, setRpcUrl } = useWallet();
+  const { onPresentConnectModal } = useAuthWallet();
 
   const openModal = (net: Networks) => {
-    console.log(net)
-    setNetworkName(net);
-    setChainId
+    const network = networkLists[net];
 
-    // handleNetworkSwitch(net);
-    // console.log(net)
-    // onPresentConnectModal();
+    if (network) {
+      const { chainId, rpcUrls } = network;
+      setNetworkInfo({ chainId, rpcUrl: rpcUrls[0], networkName: network.id });
+      onPresentConnectModal();
+    }
   };
 
   const handleClickOutside = (event: any) => {

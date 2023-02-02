@@ -1,6 +1,8 @@
+
 // viewed
 import { Token } from "../entities/token";
 import JSBI from "jsbi";
+import type { Networks } from "../../hooks/types";
 
 export interface Address {
   97?: string;
@@ -88,3 +90,16 @@ export enum FetchStatus {
   Fetched = "FETCHED",
   Failed = "FAILED",
 }
+
+export type SetupNetworkArgs = {
+  id: Networks;
+  chainId: number;
+  networkName: string;
+  nativeCurrency: {
+    name: string;
+    symbol: string;
+    decimals: number;
+  };
+  rpcUrls: string[];
+  blockExplorerUrls: string[];
+};
