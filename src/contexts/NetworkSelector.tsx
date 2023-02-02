@@ -100,7 +100,6 @@ function NetworkSelectorProvider({ children }: { children: React.ReactNode }) {
         | ethers.providers.JsonRpcFetchFunc
     ): ethers.providers.Web3Provider => {
       const {chainId} = networkInfo;
-      console.log(chainId, "FRomgetlib")
 
       const library = new Web3Provider(provider, chainId);
       // const library = new ethers.providers.Web3Provider(provider);
