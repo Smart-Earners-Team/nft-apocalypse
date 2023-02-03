@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactDOM, ReactEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 export interface GlobalTypes {
     text?: string | undefined,
