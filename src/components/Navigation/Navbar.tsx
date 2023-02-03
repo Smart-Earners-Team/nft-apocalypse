@@ -30,7 +30,7 @@ export const Navbar = () => {
           })}
 
           <span className='flex justify-center align-baseline'>
-            <BiMenu size={33} className='mt-2 p-1 opacity-50 hover:opacity-100 duration-300' onClick={() => setIsMenuOpen(true)} />
+            <BiMenu size={33} className='mt-2 p-1 duration-300' onClick={() => setIsMenuOpen(true)} />
           </span>
 
         </nav>
