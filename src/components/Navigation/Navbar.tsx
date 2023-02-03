@@ -29,9 +29,9 @@ export const Navbar = () => {
             )
           })}
 
-          <span className='flex justify-center align-baseline'>
+          {/* <span className='flex justify-center align-baseline'>
             <BiMenu size={33} className='mt-2 p-1 duration-300' onClick={() => setIsMenuOpen(true)} />
-          </span>
+          </span> */}
 
         </nav>
 

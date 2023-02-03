@@ -10,7 +10,7 @@ import useActiveWeb3React from "../../hooks/useActiveWeb3React";
 
 export const address: undefined = undefined;
 
-const networks: {
+export const networks: {
   networkIcon: JSX.Element;
   network: string;
   name: Networks;

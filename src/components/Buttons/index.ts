@@ -18,5 +18,5 @@ export const buttonSizeClasses: Record<ButtonSize, string> = {
 
 export const buttonVariantClasses: Record<ButtonVariant, string> = {
     primary: "text-slate-600 bg-[#89daf3] hover:shadow-xl duration-300 rounded-xl block",
-    secondary: "bg-transparent border text-slate-600 border-slate-400 rounded-xl duration-300 hover:shadow-xl",
+    secondary: "bg-transparent border text-inherit border-slate-400 rounded-xl duration-300 hover:shadow-xl",
 };
