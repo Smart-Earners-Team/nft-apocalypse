@@ -1,6 +1,7 @@
 import Button from '../Buttons/Button';
 import * as React from 'react';
 import { Glitch } from '../Tools/GlitchText/GlitchText';
+import { Link } from 'gatsby';
 
 const Header = () => {
 
@@ -12,11 +13,19 @@ const Header = () => {
                 <div className='text-center md:text-left text-3xl md:text-7xl py-6 whitespace-nowrap overflow-hidden'>
                     <Glitch text='NFT APOCALYPSE' />
                 </div>
+
                 <div className='flex md:ml-5'>
+
                     <div className='mx-1 py-5 flex'>
-                        <Button title='Stake NFTs' />
+
+                        <Link to='/farm'>
+                            <Button title='Stake NFTs' />
+                        </Link>
+
                         <Button variant='secondary' title='Stake NFTx' />
+
                     </div>
+                    
                 </div>
 
                 <div>The first multichain metaverse NFT platform rewarding both holders and digital creators</div>

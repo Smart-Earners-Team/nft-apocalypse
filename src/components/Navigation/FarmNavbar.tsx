@@ -67,7 +67,7 @@ export const FarmNavbar = () => {
                             <RiCloseFill />
                         </button>
 
-                        <div className='absolute left-5 bottom-5 animate-bounce md:hidden text-slate-900 text-xs'>
+                        <div className='absolute left-5 bottom-5 animate-bounce md:hidden inline-block text-slate-900 text-xs'>
                             Download Whitepaper | <a className='hover:underline' href='/404' >PDF</a> | <a className='hover:underline' href='/404'>EPUB</a>
                         </div>
 

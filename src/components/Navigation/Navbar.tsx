@@ -20,7 +20,7 @@ export const Navbar = () => {
 
         <LogoImage />
 
-        <nav className='flex float-right gap-5'>
+        <nav className='flex float-right gap-3 md:gap-5'>
           {topNavItems.map((val, key) => {
             return (
               <div key={key} className='p-3 md:block hidden'>
