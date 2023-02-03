@@ -4,6 +4,7 @@ import { LogoImage, MenuSwitcher } from '../common/styled';
 import { farmNavItems } from '.';
 import { DropdownMenu } from '../Tools/DropdownMenu';
 import { BiMenu } from 'react-icons/bi';
+import {GiHamburgerMenu} from 'react-icons/gi'
 import { RiCloseFill } from 'react-icons/ri';
 
 export const FarmNavbar = () => {
@@ -27,7 +28,7 @@ export const FarmNavbar = () => {
                     })}
 
                     <span className='flex justify-center align-baseline'>
-                        <BiMenu size={33} className='mt-2 p-1 opacity-50 hover:opacity-100 duration-300' onClick={() => setIsMenuOpen(true)} />
+                        <GiHamburgerMenu size={33} className='mt-2 p-1 opacity-505 hover:opacity-100 duration-300' onClick={() => setIsMenuOpen(true)} />
                     </span>
                 </nav>
             </div>
