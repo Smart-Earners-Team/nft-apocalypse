@@ -164,9 +164,15 @@ const Farm = () => {
 
                 <div className='py-2 whitespace-nowrap align-middle ml-5'>
                   <div className='px-2'>Start Farming</div>
-                  <span onClick={()=>openModal()}>
+                  {!account && (
+                    <span onClick={()=>openModal()}>
                     <Button title='Connect Wallet' size='small' />
                   </span>
+                  )}
+
+                  {account && (
+                    <Button title='Farm' size='small' />
+                  )}
                 </div>
 
               </div>
