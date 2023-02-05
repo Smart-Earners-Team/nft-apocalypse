@@ -66,7 +66,7 @@ export const Navbar = () => {
               <RiCloseFill />
             </button>
 
-            <div className='absolute left-5 bottom-5 animate-bounce md:hidden inline-block text-inherit text-xs'>
+            <div className='absolute left-5 bottom-10 animate-bounce md:hidden inline-block text-inherit text-xs'>
               Download Whitepaper | <a className='hover:underline' href='/404' >PDF</a> | <a className='hover:underline' href='/404'>EPUB</a>
             </div>
 
