@@ -64,7 +64,7 @@ const ModalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           {/* The backdrop, rendered as a fixed sibling to the panel container */}
           <div className="fixed inset-0 bg-black/30" aria-hidden="true" onClick={handleOverlayDismiss} />
           {/* Full-screen container to center the panel */}
-          <div className="fixed inset-0 min-h-full flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 min-h-full flex items-center justify-center p-4 overflow-y-auto text-black">
             <Dialog.Panel className="w-full mx-auto">
               {/* <Overlay onClick={handleOverlayDismiss} /> */}
               {React.isValidElement(modalNode) &&

@@ -91,7 +91,7 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
             <span className="shadow-md">
               <button
                 type="button"
-                className="inline-flex justify-center w-full border-0 px-2 py-2 text-sm leading-5 font-medium text-gray-800 hover:text-gray-700 focus:outline-none focus:border-0 outline-slate-50"
+                className="inline-flex justify-center w-full border-0 px-2 py-2 text-sm leading-5 font-medium text-inherit hover:text-inherit focus:outline-none focus:border-0"
                 onClick={handleMenuToggle}
               >
                 Select Chain
@@ -100,7 +100,7 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
           </div>
 
           {isOpen && (
-            <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-auto shadow-lg h-auto text-slate-500 text-md">
+            <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-auto shadow-lg h-auto text-inherit opacity-80 text-md">
               <div>
                 <div className="py-1 text-xl">
                   {networks.map((val, key) => {

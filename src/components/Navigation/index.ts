@@ -6,3 +6,11 @@ export const topNavItems = [
 export const farmNavItems = [
     { id: "1", title: "Whitepaper", to: "/404" },
 ];
+
+export const network = {
+    id: `${{}}`,
+    symbol: `BSC`,
+    user: {
+        address: ``
+    },
+}
