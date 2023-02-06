@@ -17,11 +17,13 @@ export default function IndexPage() {
       </Helmet>
       <Layout navbar footer>
         <Header/>
-        <Intro/>
-        <Utility/>
-        <CarouselComp/>
-        <Airdrops/>
-        <ComingSoon/>
+        <div className='mx-auto md:mx-32'>
+          <Intro />
+          <Utility />
+          <CarouselComp />
+          <Airdrops />
+          <ComingSoon />
+        </div>
       </Layout>
     </React.Fragment>
   )

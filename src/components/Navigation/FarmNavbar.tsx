@@ -41,12 +41,8 @@ export const FarmNavbar = () => {
                         );
                     })}
 
-                    <span onClick={() => setIsMenuOpen(true)} className='duration-300 select-none opacity-90'>
-                        <Button
-                            className='!text-inherit'
-                            variant='secondary'
-                            title={`${network.symbol} ${network.user.address}`}
-                        />
+                    <span className='duration-300 select-none opacity-90'>
+                        <DropdownMenu />
                     </span>
 
                     {/* <span className='flex justify-center align-baseline'>

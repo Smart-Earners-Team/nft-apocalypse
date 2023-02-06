@@ -11,9 +11,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const buttonSizeClasses: Record<ButtonSize, string> = {
-    small: "py-2 px-3 text-sm m-1",
-    medium: "py-3 px-4 text-sm m-1",
-    large: "py-7 px-6 text-sm m-1",
+    small: "py-3 px-4 text-sm m-1",
+    medium: "py-4 px-5 text-sm m-1",
+    large: "py-8 px-6 text-sm m-1",
 };
 
 export const buttonVariantClasses: Record<ButtonVariant, string> = {

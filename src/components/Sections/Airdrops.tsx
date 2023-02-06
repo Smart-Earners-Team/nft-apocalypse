@@ -29,7 +29,7 @@ export const Airdrops = () => {
             </div>
 
             <div className='p-1 md:w-[50%]'>
-                <StaticImage src={image} alt='' className='rounded-xl min-w-full h-full' />
+                <StaticImage src={image} alt='' className='rounded-xl min-w-full h-[350px]' />
             </div>
 
         </div>

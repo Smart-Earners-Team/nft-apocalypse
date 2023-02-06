@@ -2,21 +2,22 @@ import Button from '../Buttons/Button';
 import * as React from 'react';
 import { Glitch } from '../Tools/GlitchText/GlitchText';
 import { Link } from 'gatsby';
+import Typewriter from 'typewriter-effect';
 
 const Header = () => {
 
     return (
         <div>
 
-            <div className='w-[80%] mx-auto py-7 pl-[20px] md:pl-[120px]'>
+            <div className='w-[80%] mx-auto py-3'>
 
-                <div className='text-center md:text-left text-3xl md:text-7xl py-6 whitespace-nowrap overflow-hidden'>
+                <div className='text-center mx-auto text-5xl md:text-8xl py-6 whitespace-nowrap overflow-hidden text'>
                     <Glitch text='NFT APOCALYPSE' />
                 </div>
 
-                <div className='flex md:ml-5'>
+                <div className='flex md:ml-10'>
 
-                    <div className='mx-1 py-5 flex'>
+                    <div className='mx-auto py-5 flex'>
 
                         <Link to='/farm'>
                             <Button title='Stake NFTs' />
@@ -28,11 +29,20 @@ const Header = () => {
                     
                 </div>
 
-                <div>The first multichain metaverse NFT platform rewarding both holders and digital creators</div>
+                <div className='text-center'>
+                    <Typewriter
+                        options={{
+                            strings: ['The first multichain metaverse NFT platform rewarding both holders and digital creators'],
+                            autoStart: true,
+                            loop: true,
+                            delay: 200,
+                        }}
+                    />
+                </div>
 
             </div>
 
-            <div className="border border-[#ec1f38] mb-10" />
+            <div className="border border-[#ec1f38] my-10" />
 
         </div>
     )

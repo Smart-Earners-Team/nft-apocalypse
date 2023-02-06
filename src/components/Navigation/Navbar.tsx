@@ -4,7 +4,7 @@ import { LogoImage } from '../common/styled'
 import { topNavItems } from '.'
 import Button from '../Buttons/Button'
 import { network } from '.'
-import { BiMenu } from 'react-icons/bi';
+// import { BiMenu } from 'react-icons/bi';
 import { DropdownMenu } from '../Tools/DropdownMenu';
 import { RiCloseFill } from 'react-icons/ri';
 
@@ -31,12 +31,8 @@ export const Navbar = () => {
             )
           })}
 
-          <span onClick={() => setIsMenuOpen(true)} className='duration-300 select-none opacity-90'>
-            <Button
-              className='!text-inherit'
-              variant='secondary'
-              title={`${network.symbol} ${network.user.address}`}
-            />
+          <span className='duration-300 select-none opacity-90'>
+            <DropdownMenu />
           </span>
 
           {/* <span className='flex justify-center align-baseline'>
