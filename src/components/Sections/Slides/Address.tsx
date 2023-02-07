@@ -24,15 +24,11 @@ export const Address = () => {
 
                 </div>
 
-                <div className='my-5 text-sm flex justify-center flex-wrap'>
+                <div className='my-5 text-xs flex justify-center flex-wrap'>
 
                     <div className='py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Binance SmartChain</a>
-
-                    </div>
-
-                    <div className='py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Huobi Blockchain</a>
 
@@ -41,10 +37,6 @@ export const Address = () => {
                     <div className='py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on xDai Mainnet</a>
-
-                    </div>
-
-                    <div className='py-5'>
 
                         <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Fantom Opera (FTM)</a>
 

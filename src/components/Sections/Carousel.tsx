@@ -8,6 +8,7 @@ import 'react-multi-carousel/lib/styles.css';
 export const CarouselComp: React.FC = () => {
     return (
         <Carousel 
+            autoPlay
             additionalTransfrom={0}
             arrows={false}
             autoPlaySpeed={3000}
@@ -65,7 +66,7 @@ export const CarouselComp: React.FC = () => {
                 <Address />
             </div>
 
-            <div id='listing' className='w-fit'>
+            <div id='listing'>
                 <Listing />
             </div>
 

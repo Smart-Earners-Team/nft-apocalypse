@@ -7,9 +7,9 @@ export const Tokenomics = () => {
 
             <div className='text-left'>
 
-                <div className='text-2xl py-5'>Tokenomics</div>
+                <div className='text-2xl py-5 text-center'>Tokenomics</div>
 
-                <div className='p-1'>
+                <div className='p-2'>
                     <li className='list-disc'>Max. Total Supply - 10,000,000,000,000 NFTx</li>
                     <li className='list-disc'>Genesis Mint: 1,200,000,000,000 NFTx</li>
                     <li className='list-disc'>LP Farming: 1,000,000,000,000 NFTx</li>
