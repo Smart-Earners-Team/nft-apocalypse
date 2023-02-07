@@ -20,7 +20,7 @@ export const Address = () => {
 
                     <CopyButton onClick={()=> navigator.clipboard.writeText(GlobalVariables.smartContractAddress)}/>                 
 
-                    <input type={'text'} className='pl-10 text-center text-clip px-2 py-3 outline-none border border-current w-[400px] cursor-default' value={GlobalVariables.smartContractAddress} readOnly />
+                    <input type={'text'} className='pl-10 text-center text-clip px-2 py-3 outline-none border border-current w-[400px] cursor-default bg-transparent' value={GlobalVariables.smartContractAddress} readOnly />
 
                 </div>
 

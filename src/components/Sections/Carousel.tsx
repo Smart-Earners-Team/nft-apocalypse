@@ -40,13 +40,13 @@ export const CarouselComp: React.FC = () => {
                     },
                     items: 1
                 },
-                tablet: {
-                    breakpoint: {
-                        max: 1024,
-                        min: 464
-                    },
-                    items: 1
-                }
+                // tablet: {
+                //     breakpoint: {
+                //         max: 1024,
+                //         min: 464
+                //     },
+                //     items: 3
+                // }
             }}
             rewind={false}
             rewindWithAnimation={false}
@@ -57,11 +57,11 @@ export const CarouselComp: React.FC = () => {
             slidesToSlide={1}
             swipeable>
 
-            <div id='tokenomics' className='w-fit'>
+            <div id='tokenomics'>
                 <Tokenomics/>
             </div>
 
-            <div id='address' className='w-fit'>
+            <div id='address'>
                 <Address />
             </div>
 
