@@ -5,11 +5,11 @@ import { GlobalVariables } from '../../../globals/index';
 export const Address = () => {
 
     return (
-        <div className='px-10 py-3 gap-5 my-5 w-screen'>
+        <div className='px-10 py-3 gap-5 my-5'>
 
-            <div className='text-center gap-3'>
+            <div className='gap-3'>
 
-                <div className='p-1'>Smart Contract Address</div>
+                <div className='py-5 text-2xl text-center'>Smart Contract Address</div>
 
                 <div className='p-1'>
                     We are a revolutionary project already existing on four(4) 
@@ -20,7 +20,7 @@ export const Address = () => {
 
                     <CopyButton onClick={()=> navigator.clipboard.writeText(GlobalVariables.smartContractAddress)}/>                 
 
-                    <input type={'text'} className='text-center text-xs px-2 py-3 shadow-md outline-none w-[400px] cursor-default bg-transparent hover:shadow-lg' value={GlobalVariables.smartContractAddress} readOnly />
+                    <input type={'text'} className='pl-10 text-center text-clip px-2 py-3 outline-none border border-current w-[400px] cursor-default' value={GlobalVariables.smartContractAddress} readOnly />
 
                 </div>
 

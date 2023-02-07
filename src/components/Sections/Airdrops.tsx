@@ -8,7 +8,7 @@ export const Airdrops = () => {
     const image = `../../assets/images/bitkoin.jpg`
 
     return (
-        <div className='items-center flex flex-wrap md:flex-nowrap px-10 py-3 gap-5'>
+        <div id='airdrops' className='items-center flex flex-wrap md:flex-nowrap px-10 py-3 gap-5'>
 
             <div className='text-justify md:w-[50%]'>
 

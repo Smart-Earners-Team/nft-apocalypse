@@ -2,33 +2,73 @@ import * as React from 'react';
 import { Address } from './Slides/Address';
 import { Tokenomics } from './Slides/Tokenomics';
 import { Listing } from './Slides/Listing';
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css';
 
 export const CarouselComp: React.FC = () => {
     return (
-        <div>
+        <Carousel 
+            additionalTransfrom={0}
+            arrows={false}
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className="mx-auto"
+            containerClass=""
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside
+            responsive={{
+                desktop: {
+                    breakpoint: {
+                        max: 3000,
+                        min: 1024
+                    },
+                    items: 3
+                },
+                mobile: {
+                    breakpoint: {
+                        max: 464,
+                        min: 0
+                    },
+                    items: 1
+                },
+                tablet: {
+                    breakpoint: {
+                        max: 1024,
+                        min: 464
+                    },
+                    items: 1
+                }
+            }}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable>
 
-            <div className="carousel w-full">
-
-                <div id='item1' className="carousel-item">
-                    <Address/>
-                </div>
-
-                <div id='item2' className="carousel-item">
-                    <Tokenomics/>
-                </div>
-
-                <div id='item3' className="carousel-item">
-                    <Listing/>
-                </div>
-
+            <div id='tokenomics' className='w-fit'>
+                <Tokenomics/>
             </div>
-            
-            <div className="flex justify-center w-full py-2 gap-2">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
+
+            <div id='address' className='w-fit'>
+                <Address />
             </div>
 
-        </div>
+            <div id='listing' className='w-fit'>
+                <Listing />
+            </div>
+
+        </Carousel>
     );
 };

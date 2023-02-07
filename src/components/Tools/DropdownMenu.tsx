@@ -87,32 +87,34 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
   return (
     <React.Fragment>
       {!account && (
-        <div ref={ref} className="relative inline-block mt-2">
+        <div ref={ref} className="inline-block relative -top-[3px]">
           <div>
             <span className="">
               <button
                 type="button"
-                className="rounded-xl bg-inherit shadow-md inline-flex justify-center w-full border-slate-600 px-3 py-2 text-sm leading-5 font-medium text-inherit hover:text-inherit focus:outline-none focus:border-0"
+                className="inline-flex justify-center w-full px-3 py-2 text-md leading-5 font-medium text-inherit hover:text-inherit focus:outline-none focus:border-0"
                 onClick={handleMenuToggle}
               >
-                {network.symbol} {network.user.address}
+                {network.symbol} {
+                  connected ? network.user.address : null
+                }
               </button>
             </span>
           </div>
 
           {isOpen && (
-            <div className="origin-top-left absolute top-6 left-0 text-center mt-0 w-auto shadow-2xl h-auto text-inherit opacity-80 text-md bg-inherit">
+            <div className="absolute top-8 text-center w-auto h-auto text-inherit rounded-md bg-inherit">
               <div>
-                <div className="py-1 text-xl">
+                <div className="py-1">
                   {networks.map((val, key) => {
                     return (
                       <div key={key}>
                         <button
                           onClick={() => openModal(`${val.name}`)}
-                          className="flex align-middle justify-center p-2"
+                          className="flex align-middle justify-center py-2"
                         >
                           {val.networkIcon}
-                          <span className="text-xs pl-2 pt-1">{val.network}</span>
+                          <span className="pl-2 pt-1 text-xs">{val.network}</span>
                         </button>
                       </div>
                     );

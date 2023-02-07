@@ -20,7 +20,9 @@ export default function IndexPage() {
         <div className='mx-auto md:mx-32'>
           <Intro />
           <Utility />
-          <CarouselComp />
+        </div>
+        <CarouselComp />
+        <div className='mx-auto md:mx-32'>
           <Airdrops />
           <ComingSoon />
         </div>

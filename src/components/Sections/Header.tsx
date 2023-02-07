@@ -11,7 +11,7 @@ const Header = () => {
 
             <div className='w-[80%] mx-auto py-3'>
 
-                <div className='text-center mx-auto text-5xl md:text-8xl py-6 whitespace-nowrap overflow-hidden text'>
+                <div className='text-center mx-auto text-3xl md:text-8xl md:py-7 py-5 whitespace-nowrap overflow-hidden'>
                     <Glitch text='NFT APOCALYPSE' />
                 </div>
 
