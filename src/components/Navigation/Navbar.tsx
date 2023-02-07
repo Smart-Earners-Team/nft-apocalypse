@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { LogoImage } from '../common/styled'
 import { topNavItems } from '.'
-import Button from '../Buttons/Button'
-import { network } from '.'
+// import Button from '../Buttons/Button'
+// import { network } from '.'
 import { BiMenu, BiSearch } from 'react-icons/bi';
 import { DropdownMenu } from '../Tools/DropdownMenu';
 import { RiCloseFill } from 'react-icons/ri';
@@ -15,9 +15,9 @@ export const Navbar = () => {
   return (
     <div>
 
-      <div className='px-[10vw] py-2 shadow-xl flex-grow'>
+      <div className='px-[10vw] py-2 shadow-xl flex justify-between'>
 
-        <div className='float-left pr-[30px] md:pr-0 md:hidden'>
+        <div className='float-left pr-[30px] md:pr-0 md:hidden py-3'>
           <button>
             <BiSearch className='text-2xl' />
           </button>

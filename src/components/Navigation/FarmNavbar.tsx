@@ -11,14 +11,14 @@ import {
 import {
     DropdownMenu
 } from '../Tools/DropdownMenu';
-import { BiMenu, BiSearchAlt } from 'react-icons/bi';
+import { BiMenu, BiSearch } from 'react-icons/bi';
 import {
     RiCloseFill
 } from 'react-icons/ri';
-import Button from '../Buttons/Button';
-import {
-    network
-} from '.';
+// import Button from '../Buttons/Button';
+// import {
+//     network
+// } from '.';
 
 export const FarmNavbar = () => {
 
@@ -28,10 +28,14 @@ export const FarmNavbar = () => {
     return (
         <div>
 
-            <div className='px-[10vw] py-2 shadow-xl dark:text-slate-50'>
+            <div className='px-[10vw] py-2 shadow-xl flex justify-between'>
 
-                <div className='float-left pr-[30px] md:pr-0 md:hidden'>
-                    <BiSearchAlt />
+                <div className='float-left pr-[30px] md:pr-0 md:hidden py-3'>
+
+                    <button>
+                        <BiSearch className='text-2xl' />
+                    </button>
+                    
                 </div>
 
                 <LogoImage />

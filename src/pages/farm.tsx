@@ -85,7 +85,7 @@ const Farm = () => {
 
         <div className='my-5 mx-auto'>
 
-          <div className="w-[300px] flex relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto">
+          <div className="w-[300px] flex relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto hidden md:block">
 
             <input
               type="text"
