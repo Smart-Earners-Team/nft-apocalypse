@@ -4,7 +4,7 @@ import { LogoImage } from '../common/styled'
 import { topNavItems } from '.'
 import Button from '../Buttons/Button'
 import { network } from '.'
-import { BiMenu } from 'react-icons/bi';
+import { BiMenu, BiSearch } from 'react-icons/bi';
 import { DropdownMenu } from '../Tools/DropdownMenu';
 import { RiCloseFill } from 'react-icons/ri';
 
@@ -15,12 +15,15 @@ export const Navbar = () => {
   return (
     <div>
 
-      <div className='px-[10vw] py-2 shadow-xl'>
+      <div className='px-[10vw] py-2 shadow-xl flex-grow'>
 
         <div className='float-left pr-[30px] md:pr-0 md:hidden'>
+          <button>
+            <BiSearch className='text-2xl' />
+          </button>
         </div>
 
-        <LogoImage />
+        <LogoImage className=''/>
 
         <nav className='flex float-right gap-3 md:gap-5'>
           {topNavItems.map((val, key) => {

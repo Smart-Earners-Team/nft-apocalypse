@@ -19,7 +19,11 @@ export const Error404Image = () => {
     )
 };
 
-export const LogoImage = () => {
+export const LogoImage:React.FC<GlobalTypes> = (
+    {
+        className
+    }
+) => {
 
     const logoStyle = {
         backgroundRepeat: "no-repeat",
@@ -31,7 +35,7 @@ export const LogoImage = () => {
 
     return(
         <a href='/'>
-            <StaticImage src='../../assets/icons/icon.png' alt='logo' style={logoStyle} />
+            <StaticImage src='../../assets/icons/icon.png' alt='logo' style={logoStyle} className={className}/>
         </a>
     )
 };

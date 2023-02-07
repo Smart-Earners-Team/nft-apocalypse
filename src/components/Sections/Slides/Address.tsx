@@ -28,17 +28,17 @@ export const Address = () => {
 
                     <div className='py-5'>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Binance SmartChain</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href=''>View on Binance SmartChain</a>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Huobi Blockchain</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href=''>View on Huobi Blockchain</a>
 
                     </div>
 
                     <div className='py-5'>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on xDai Mainnet</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href=''>View on xDai Mainnet</a>
 
-                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href='#'>View on Fantom Opera (FTM)</a>
+                        <a className='mx-1 my-1 rounded-xl bg-[#89daf3] px-3 py-2 text-slate-800' href=''>View on Fantom Opera (FTM)</a>
 
                     </div>
 

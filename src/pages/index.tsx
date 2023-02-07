@@ -21,7 +21,9 @@ export default function IndexPage() {
           <Intro />
           <Utility />
         </div>
-        <CarouselComp />
+        <div>
+          <CarouselComp />
+        </div>
         <div className='mx-auto md:mx-32'>
           <Airdrops />
           <ComingSoon />

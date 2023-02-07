@@ -11,7 +11,7 @@ import {
 import {
     DropdownMenu
 } from '../Tools/DropdownMenu';
-import { BiMenu } from 'react-icons/bi';
+import { BiMenu, BiSearchAlt } from 'react-icons/bi';
 import {
     RiCloseFill
 } from 'react-icons/ri';
@@ -29,6 +29,10 @@ export const FarmNavbar = () => {
         <div>
 
             <div className='px-[10vw] py-2 shadow-xl dark:text-slate-50'>
+
+                <div className='float-left pr-[30px] md:pr-0 md:hidden'>
+                    <BiSearchAlt />
+                </div>
 
                 <LogoImage />
 

@@ -14,15 +14,15 @@ export const Intro = () => {
 
             <div className='items-center flex flex-wrap md:flex-nowrap px-10 py-3 gap-5'>
 
-                <div className='text-justify md:w-[50%]'>
+                <div className='md:w-[50%]'>
 
                     <div className='text-2xl p-1 text-center'>Introducing the future</div>
 
-                    <div className='text-md p-1'>
+                    <div className='text-md py-2'>
                         The NFT Apocalypse Dao would connect augmented reality (AR/VR) with Decentralized Finance (Defi) and Non-Fungible Tokens (NFTs) across multiple blockchains while rewarding holders and creators.
                     </div>
 
-                    <div className='text-md p-1'>
+                    <div className='text-md py-2'>
                         NFT Apocalyse is the first Multichain Metaverse platform adding value to both holders and digital creators. Don’t miss!!!
                     </div>
 

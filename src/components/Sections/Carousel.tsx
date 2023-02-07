@@ -15,7 +15,7 @@ export const CarouselComp: React.FC = () => {
             centerMode={false}
             className="mx-auto"
             containerClass=""
-            dotListClass=""
+            dotListClass="border-none"
             draggable
             focusOnSelect={false}
             infinite
@@ -25,7 +25,7 @@ export const CarouselComp: React.FC = () => {
             pauseOnHover
             renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={false}
-            renderDotsOutside
+            renderDotsOutside={false}
             responsive={{
                 desktop: {
                     breakpoint: {
