@@ -85,7 +85,7 @@ const Farm = () => {
 
         <div className='my-5 mx-auto'>
 
-          <div className="w-[300px] flex relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto hidden md:block">
+          <div className="w-[300px] relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto hidden md:block">
 
             <input
               type="text"
@@ -120,7 +120,7 @@ const Farm = () => {
           {pool.map((item, index)=>{
             return(
               // <div>
-          <div className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>
+          <div key={index} className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>
 
           <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
