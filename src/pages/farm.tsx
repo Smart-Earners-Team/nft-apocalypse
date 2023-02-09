@@ -116,7 +116,7 @@ const Farm = () => {
 
         </div>
 
-        <div className='w-50 sm:mx-52 mx-auto text-center'>
+        <div className='w-50 mx-5 md:mx-52 text-center'>
 
           {/* {pool.map((item, index) => {
             return (
@@ -192,8 +192,8 @@ const Farm = () => {
                 <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[310px] text-center shadow-sm'>
                   
                   <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2'>
-                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='-left-[20vw] md:left-auto w-[150px] select-none pointer-events-none' />
-                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[8vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-12'/>
+                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='-left-[15vw] md:left-auto w-[150px] select-none pointer-events-none' />
+                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[6vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-10'/>
                   </div>
 
                   <div className='text-left text-slate-800 select-none absolute top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>
@@ -201,9 +201,9 @@ const Farm = () => {
                     <div>TVL: {item.tvl}%</div>
                   </div>
 
-                  <div className='absolute text-left top-10 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-lg duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border'>
+                  <div className='absolute text-left top-5 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-lg duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
                     
-                    <div className='p-3 text-left text-slate-800 grid gap-3 md:gap-5 my-auto'>
+                    <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto'>
 
                       <div className='flex text-md font-bold gap-x-3 px-2 text-inherit'>
                         <div>APR: {item.apr}%</div>
