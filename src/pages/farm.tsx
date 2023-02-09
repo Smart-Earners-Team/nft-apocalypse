@@ -201,11 +201,11 @@ const Farm = () => {
                     <div>TVL: {item.tvl}%</div>
                   </div>
 
-                  <div className='absolute text-left top-5 left-[310px] p-2 shadow-md w-fit border'>
+                  <div className='absolute text-left top-5 left-[310px] p-2 shadow-md duration-300 ease-in-out w-fit border'>
                     
-                    <div className='p-3 text-left grid gap-5'>
+                    <div className='p-3 text-left grid gap-1'>
 
-                      <div className='flex whitespace-nowrap text-md font-bold gap-x-3 px-2 text-inherit'>
+                      <div className='flex text-md font-bold gap-x-3 px-2 text-inherit'>
                         <div>APR: {item.apr}%</div>
                         <div>TVL: {item.tvl}%</div>
                       </div>
@@ -220,10 +220,6 @@ const Farm = () => {
                         <Button title='Remove Staking' className='!border !border-dashed !border-[#DD261A] text-[#DD261A] !bg-[#DD261A]/10 !w-full !mx-auto' />
                       </div>
 
-                    </div>
-
-                    <div className='absolute top-1/2 left-0'>
-                      <BiCaretRight />
                     </div>
 
                   </div>
