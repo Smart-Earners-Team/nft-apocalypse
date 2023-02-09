@@ -36,18 +36,18 @@ export const CarouselComp: React.FC = () => {
                 },
                 mobile: {
                     breakpoint: {
-                        max: 464,
+                        max: 740,
                         min: 0
                     },
                     items: 1
                 },
-                // tablet: {
-                //     breakpoint: {
-                //         max: 1024,
-                //         min: 464
-                //     },
-                //     items: 3
-                // }
+                tablet: {
+                    breakpoint: {
+                        max: 1024,
+                        min: 740
+                    },
+                    items: 3
+                }
             }}
             rewind={false}
             rewindWithAnimation={false}

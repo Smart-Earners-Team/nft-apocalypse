@@ -6,6 +6,7 @@ import Button from '../components/Buttons/Button';
 import Layout from '../components/Layout';
 import useAuthWallet from '../hooks/useWallet';
 import useActiveWeb3React from '../hooks/useActiveWeb3React';
+import { BiCaretRight } from 'react-icons/bi';
 
 const Farm = () => {
   const pool = [
@@ -66,10 +67,10 @@ const Farm = () => {
   ]
 
   const { onPresentConnectModal } = useAuthWallet();
-  const {account} = useActiveWeb3React()
+  const { account } = useActiveWeb3React()
 
 
-  const openModal=()=>{
+  const openModal = () => {
     onPresentConnectModal();
   }
 
@@ -115,39 +116,38 @@ const Farm = () => {
 
         </div>
 
-        <div className='w-50 sm:mx-52 mx-auto'>
+        <div className='w-50 sm:mx-52 mx-auto text-center'>
 
-          {pool.map((item, index)=>{
-            return(
-              // <div>
-          <div key={index} className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>
+          {/* {pool.map((item, index) => {
+            return (
+              <div key={index} className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>
 
-          <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
+                <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
 
-            <div className='text-slate-800'>
-              <div>Name</div>
-              <div className='text-xl pt-5'>{item.name}</div>
-            </div>
+                  <div className='text-slate-800'>
+                    <div>Name</div>
+                    <div className='text-xl pt-5'>{item.name}</div>
+                  </div>
 
-            <div className='text-slate-800'>
-              <div>APR</div>
-              <div className='text-xl pt-5'>{item.apr}</div>
-            </div>
+                  <div className='text-slate-800'>
+                    <div>APR</div>
+                    <div className='text-xl pt-5'>{item.apr}</div>
+                  </div>
 
-            <div className='text-slate-800'>
-              <div>TVL</div>
-              <div className='text-xl pt-5'>{item.tvl}</div>
-            </div>
+                  <div className='text-slate-800'>
+                    <div>TVL</div>
+                    <div className='text-xl pt-5'>{item.tvl}</div>
+                  </div>
 
-          </div>
+                </div>
 
-          <div className='grid grid-cols-3 gap-4 h-[auto]'>
+                <div className='grid grid-cols-3 gap-4 h-[auto]'>
 
-            <div className='bg-[#89daf356] p-3 text-center'>
-              <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
-            </div>
+                  <div className='bg-[#89daf356] p-3 text-center'>
+                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
+                  </div>
 
-            <div className='inline-flex flex-wrap'>
+                  <div className='inline-flex flex-wrap'>
 
               <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
 
@@ -177,12 +177,60 @@ const Farm = () => {
 
               </div>
 
-            </div>
+                  </div>
 
-          </div>
+                </div>
 
-        </div>
-        // </div>
+              </div>
+            )
+          })} */}
+
+          {pool.map((item, index) => {
+            return (
+              <div key={index} className='my-5 md:w-[80%] mx-auto'>
+
+                <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 w-[310px] text-center shadow-sm'>
+                  
+                  <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2'>
+                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[150px] select-none pointer-events-none' />
+                    <Button title={item.name} className='!w-full !mx-auto !bg-white/90 shadow-lg'/>
+                  </div>
+
+                  <div className='text-left text-slate-800 select-none absolute top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>
+                    <div>APR: {item.apr}%</div>
+                    <div>TVL: {item.tvl}%</div>
+                  </div>
+
+                  <div className='absolute text-left top-5 left-[310px] p-2 shadow-md w-fit border'>
+                    
+                    <div className='p-3 text-left grid gap-5'>
+
+                      <div className='flex whitespace-nowrap text-md font-bold gap-x-3 px-2 text-inherit'>
+                        <div>APR: {item.apr}%</div>
+                        <div>TVL: {item.tvl}%</div>
+                      </div>
+
+                      <div className='text-2xl px-2'>Earned: {item.earned}</div>
+
+                      <div className=''>
+                        <Button title='Harvest' className='!w-full !mx-auto' />
+                      </div>
+
+                      <div className=''>
+                        <Button title='Remove Staking' className='!border !border-dashed !border-[#DD261A] text-[#DD261A] !bg-[#DD261A]/10 !w-full !mx-auto' />
+                      </div>
+
+                    </div>
+
+                    <div className='absolute top-1/2 left-0'>
+                      <BiCaretRight />
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
             )
           })}
 
