@@ -196,12 +196,12 @@ const Farm = () => {
                     <Button title={item.name} className='!w-fit md:!ml-auto !ml-[6vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-10'/>
                   </div>
 
-                  <div className='text-left text-slate-800 select-none absolute top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>
+                  <div className='text-left text-slate-800 select-none absolute top-52 md:top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>
                     <div>APR: {item.apr}%</div>
                     <div>TVL: {item.tvl}%</div>
                   </div>
 
-                  <div className='absolute text-left top-5 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-lg duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
+                  <div className='absolute text-left top-5 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
                     
                     <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto'>
 
