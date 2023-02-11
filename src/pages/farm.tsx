@@ -189,7 +189,7 @@ const Farm = () => {
             return (
               <div key={index} className='container my-5 md:w-[80%] mx-auto'>
 
-                <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[310px] text-center shadow-sm'>
+                <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[310px] text-center shadow-sm duration-300 ease-in-out'>
                   
                   <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2'>
                     <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='-left-[15vw] md:left-auto w-[150px] select-none pointer-events-none' />
