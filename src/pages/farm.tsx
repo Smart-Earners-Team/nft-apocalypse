@@ -116,7 +116,7 @@ const Farm = () => {
 
         </div>
 
-        <div className='w-50 mx-5 md:mx-52 text-center'>
+        <div className='w-50 mx-10 md:mx-52 text-center'>
 
           {/* {pool.map((item, index) => {
             return (
@@ -203,7 +203,7 @@ const Farm = () => {
 
                   <div className='absolute text-left top-5 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
                     
-                    <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto'>
+                    <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto bg-inherit'>
 
                       <div className='flex text-md font-bold gap-x-3 px-2 text-inherit'>
                         <div>APR: {item.apr}%</div>
