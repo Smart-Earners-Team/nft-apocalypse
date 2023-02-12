@@ -15,17 +15,17 @@ export const Navbar = () => {
   return (
     <div>
 
-      <div className='px-[10vw] py-2 shadow-xl flex justify-between'>
+      <div className='z-0 px-[10vw] py-2 shadow-xl flex justify-between'>
 
         <div className='float-left pr-[30px] md:pr-0 md:hidden py-3'>
           <button>
-            <BiSearch className='text-2xl' />
+            <BiSearch className='text-2xl z-0 cursor-pointer' />
           </button>
         </div>
 
-        <LogoImage className=''/>
+        <LogoImage className='z-0'/>
 
-        <nav className='flex float-right gap-3 md:gap-5'>
+        <nav className='flex float-right gap-3 md:gap-5 z-0'>
           {topNavItems.map((val, key) => {
             return (
               <div key={key} className='p-3 md:block hidden'>
@@ -34,12 +34,12 @@ export const Navbar = () => {
             )
           })}
 
-          <span className='mt-2 duration-300 select-none md:block hidden'>
+          <span className='mt-2 duration-300 select-none md:block hidden z-0'>
             <DropdownMenu />
           </span>
 
-          <span className='flex justify-center align-baseline md:hidden'>
-            <BiMenu size={33} className='mt-2 p-1 duration-300' onClick={() => setIsMenuOpen(true)} />
+          <span className='flex justify-center align-baseline md:hidden z-0'>
+            <BiMenu size={33} className='mt-2 p-1 duration-300 cursor-pointer' onClick={() => setIsMenuOpen(true)} />
           </span>
 
         </nav>

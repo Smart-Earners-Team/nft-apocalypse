@@ -5,17 +5,3 @@
 *{
     font-family: Quantico, "Helvetica Neue", sans-serif;
 }
-
-/* @media screen and (prefers-color-scheme:dark){
-    body{
-        color: white;
-        background: radial-gradient(#1f323861, #3d09105f);
-    }
-}
-
-@media screen and (prefers-color-scheme:light){
-    body{
-        color:black;
-        background: radial-gradient(#e1f5fb77, #facbd186);
-    }
-} */

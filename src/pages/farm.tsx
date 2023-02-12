@@ -193,7 +193,7 @@ const Farm = () => {
                   
                   <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2'>
                     <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='-left-[15vw] md:left-auto w-[150px] select-none pointer-events-none' />
-                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[6vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-10'/>
+                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[5vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-10'/>
                   </div>
 
                   <div className='text-left text-slate-800 select-none absolute top-52 md:top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>

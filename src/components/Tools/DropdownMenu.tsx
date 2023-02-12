@@ -89,7 +89,7 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
       {!account && (
         <div ref={ref} className="inline-block relative -top-[3px]">
           <div>
-            <span className="">
+            <span className="z-0">
               <button
                 type="button"
                 className="inline-flex justify-center w-full px-3 py-2 text-md leading-5 font-medium text-inherit hover:text-inherit focus:outline-none focus:border-0"
