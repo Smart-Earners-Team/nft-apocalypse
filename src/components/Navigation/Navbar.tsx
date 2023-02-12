@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <div>
 
-      <div className='z-0 px-[10vw] py-2 shadow-xl flex justify-between'>
+      <div className='z-0 px-[10vw] py-2 shadow-2xl flex justify-between'>
 
         <div className='float-left pr-[30px] md:pr-0 md:hidden py-3'>
           <button>
