@@ -116,74 +116,7 @@ const Farm = () => {
 
         </div>
 
-        <div className='w-50 mx-10 md:mx-52 text-center'>
-
-          {/* {pool.map((item, index) => {
-            return (
-              <div key={index} className='mx-5 md:mx-20 my-5 shadow-md flex-wrap'>
-
-                <div className='grid grid-cols-3 gap-4 bg-[#89daf3] p-3'>
-
-                  <div className='text-slate-800'>
-                    <div>Name</div>
-                    <div className='text-xl pt-5'>{item.name}</div>
-                  </div>
-
-                  <div className='text-slate-800'>
-                    <div>APR</div>
-                    <div className='text-xl pt-5'>{item.apr}</div>
-                  </div>
-
-                  <div className='text-slate-800'>
-                    <div>TVL</div>
-                    <div className='text-xl pt-5'>{item.tvl}</div>
-                  </div>
-
-                </div>
-
-                <div className='grid grid-cols-3 gap-4 h-[auto]'>
-
-                  <div className='bg-[#89daf356] p-3 text-center'>
-                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[100px]' />
-                  </div>
-
-                  <div className='inline-flex flex-wrap'>
-
-              <div className='justify-evenly place-self-center flex sm:gap-10 text-sm'>
-
-                <div className='sm:flex sm:gap-10'>
-                  <div className='px-2 py-2'>
-                    <div>Earned</div>
-                    <div className='pt-3'>{item.earned}</div>
-                  </div>
-
-                  <div>
-                    <Button title='Harvest' size='small' variant='secondary' />
-                  </div>
-                </div>
-
-                <div className='py-2 whitespace-nowrap align-middle ml-5'>
-                  <div className='px-2'>Start Farming</div>
-                  {!account && (
-                    <span onClick={()=>openModal()}>
-                    <Button title='Connect Wallet' size='small' />
-                  </span>
-                  )}
-
-                  {account && (
-                    <Button title='Farm' size='small' />
-                  )}
-                </div>
-
-              </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            )
-          })} */}
+        <div className='w-50 mx-6 md:mx-52 text-center'>
 
           {pool.map((item, index) => {
             return (
@@ -201,11 +134,11 @@ const Farm = () => {
                     <div>TVL: {item.tvl}%</div>
                   </div>
 
-                  <div className='absolute text-left top-5 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
+                  <div className='absolute text-left top-3 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
                     
                     <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto bg-inherit'>
 
-                      <div className='flex text-md font-bold gap-x-3 px-2 text-inherit'>
+                      <div className='flex text-sm text font-bold gap-x-3 px-2 text-inherit'>
                         <div>APR: {item.apr}%</div>
                         <div>TVL: {item.tvl}%</div>
                       </div>
