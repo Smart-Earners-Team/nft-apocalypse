@@ -47,7 +47,15 @@ const config: GatsbyConfig = {
     options: {
       "icon": "./src/assets/icons/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", 
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "static",
+        "path": "./static"
+      },
+      __key: "static"
+    }, {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "icon",

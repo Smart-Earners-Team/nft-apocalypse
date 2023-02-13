@@ -11,7 +11,7 @@ const Header = () => {
 
             <div className='w-[80%] mx-auto py-3'>
 
-                <div className='text-center mx-auto text-3xl md:text-8xl md:py-7 py-5 whitespace-nowrap overflow-hidden'>
+                <div className='text-center mx-auto text-4xl md:text-8xl md:my-7 my-5 whitespace-nowrap overflow-hidden'>
                     <Glitch text='NFT APOCALYPSE' />
                 </div>
 
@@ -19,17 +19,19 @@ const Header = () => {
 
                     <div className='mx-auto py-5 flex'>
 
-                        <Link to='/farm'>
+                        <Link to='/farm' className='z-0 mx-1'>
                             <Button title='Stake NFTs' />
                         </Link>
 
-                        <Button variant='secondary' title='Stake NFTx' />
+                        <Link to='/' className='z-0 mx-1'>
+                            <Button variant='secondary' title='Stake NFTx' />
+                        </Link>
 
                     </div>
                     
                 </div>
 
-                <div className='text-center text-md md:text-xl'>
+                <div className='text-center text-xl md:text-2xl'>
                     <Typewriter
                         options={{
                             strings: ['The first multichain metaverse NFT platform rewarding both holders and digital creators'],

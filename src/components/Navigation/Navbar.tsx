@@ -63,7 +63,7 @@ export const Navbar = () => {
               {topNavItems.map((val, key) => {
                 return (
                   <div key={key} className='p-3'>
-                    <Link to={`${val.to}`}>{val.title}</Link>
+                    <Link onClick={() => setIsMenuOpen(false)} to={`${val.to}`}>{val.title}</Link>
                   </div>
                 )
               })}

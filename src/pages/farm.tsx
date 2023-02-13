@@ -122,35 +122,35 @@ const Farm = () => {
             return (
               <div key={index} className='container my-5 md:w-[80%] mx-auto'>
 
-                <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[310px] text-center shadow-sm duration-300 ease-in-out'>
+                <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[22vw] text-center shadow-sm duration-300 ease-in-out'>
                   
                   <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2'>
-                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='-left-[15vw] md:left-auto w-[150px] select-none pointer-events-none' />
-                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[5vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg !px-10'/>
+                    <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='left-[-100px] md:left-auto w-[120px] md:w-[12vw] select-none pointer-events-none' />
+                    <Button title={item.name} className='!w-fit md:!ml-auto !ml-[3vw] md:!w-full md:!mx-auto !bg-white/90 shadow-lg md:!px-0'/>
                   </div>
 
-                  <div className='text-left text-slate-800 select-none absolute top-52 md:top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1'>
+                  <div className='text-left text-slate-800 select-none absolute top-[45vw] md:top-14 left-3 text-xs border-l-4 border-l-[#1A8FDD] px-2 gap-y-1 hidden md:block'>
                     <div>APR: {item.apr}%</div>
                     <div>TVL: {item.tvl}%</div>
                   </div>
 
-                  <div className='absolute text-left top-3 md:top-10 left-[50vw] md:left-[309px] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
+                  <div className='absolute text-left top-[8vw] md:top-10 right-[5vw] md:left-[22vw] p-2 shadow-2xl duration-300 ease-in-out w-fit md:w-[25vw] border-0 md:border md:rounded-r-xl md:rounded-l-none rounded-2xl'>
                     
                     <div className='p-3 text-left md:text-inherit text-slate-800 grid gap-3 md:gap-5 my-auto bg-inherit'>
 
-                      <div className='flex text-sm text font-bold gap-x-3 px-2 text-inherit'>
+                      <div className='flex text-xs md:text-sm text font-bold gap-x-3 px-2 text-inherit'>
                         <div>APR: {item.apr}%</div>
                         <div>TVL: {item.tvl}%</div>
                       </div>
 
-                      <div className='text-2xl px-2'>Earned: {item.earned}</div>
+                      <div className='text-lg md:text-2xl'>Earned: {item.earned}</div>
 
-                      <div className=''>
-                        <Button title='Harvest' className='!w-full !mx-auto' />
+                      <div>
+                        <Button title='Harvest' className='!w-full !mx-auto !px-1' />
                       </div>
 
-                      <div className=''>
-                        <Button title='Remove Staking' className='!border !border-dashed !border-[#DD261A] text-[#DD261A] !bg-[#DD261A]/10 !w-full !mx-auto' />
+                      <div>
+                        <Button title='Remove Staking' className='!border !border-dashed !border-[#DD261A] text-[#DD261A] !bg-[#DD261A]/10 !w-full !mx-auto !px-1' />
                       </div>
 
                     </div>
