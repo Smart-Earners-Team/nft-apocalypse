@@ -7,6 +7,7 @@ import { topNavItems } from '.'
 import { BiMenu, BiSearch } from 'react-icons/bi';
 import { DropdownMenu } from '../Tools/DropdownMenu';
 import { RiCloseFill } from 'react-icons/ri';
+import { NetworkSwitch } from '../Tools/NetworkSwitch';
 
 export const Navbar = () => {
 
@@ -59,7 +60,7 @@ export const Navbar = () => {
               <RiCloseFill />
             </button>
 
-            <nav className='block gap-3 md:gap-5'>
+            <nav className='block gap-3 md:gap-5 content-center'>
               {topNavItems.map((val, key) => {
                 return (
                   <div key={key} className='p-3'>
@@ -68,7 +69,7 @@ export const Navbar = () => {
                 )
               })}
 
-              <span className='duration-300 select-none opacity-90'>
+              <span className='mt-5 duration-300 select-none opacity-90'>
                 <DropdownMenu />
               </span>
 

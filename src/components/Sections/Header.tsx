@@ -31,7 +31,7 @@ const Header = () => {
                     
                 </div>
 
-                <div className='text-center text-xl md:text-2xl'>
+                <div className='text-center text-xl md:text-2xl -z-[999]'>
                     <Typewriter
                         options={{
                             strings: ['The first multichain metaverse NFT platform rewarding both holders and digital creators'],

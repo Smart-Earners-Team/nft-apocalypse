@@ -15,6 +15,7 @@ import { BiMenu, BiSearch } from 'react-icons/bi';
 import {
     RiCloseFill
 } from 'react-icons/ri';
+import { NetworkSwitch } from '../Tools/NetworkSwitch';
 // import Button from '../Buttons/Button';
 // import {
 //     network
@@ -49,6 +50,10 @@ export const FarmNavbar = () => {
                         );
                     })}
 
+                    <span className='mt-3 justify-items-end duration-300 select-none md:block hidden z-0'>
+                        <NetworkSwitch />
+                    </span>
+
                     <span className='mt-2 duration-300 select-none md:block hidden z-0'>
                         <DropdownMenu />
                     </span>
@@ -56,7 +61,9 @@ export const FarmNavbar = () => {
                     <span className='justify-center align-baseline md:hidden block'>
                         <BiMenu size={33} className='mt-2 p-1 duration-300 cursor-pointer z-0' onClick={() => setIsMenuOpen(true)} />
                     </span>
+
                 </nav>
+
             </div>
             {isMenuOpen && (
                 <div
@@ -71,7 +78,7 @@ export const FarmNavbar = () => {
                             <RiCloseFill />
                         </button>
 
-                        <nav className='block gap-3 md:gap-5'>
+                        <nav className='block gap-3 md:gap-5 content-center'>
                             {farmNavItems.map((val, key) => {
                                 return (
                                     <div key={key} className='p-3'>
@@ -80,7 +87,11 @@ export const FarmNavbar = () => {
                                 )
                             })}
 
-                            <span className='duration-300 select-none opacity-90'>
+                            <span className='absolute top-5 right-24 duration-300 select-none z-0'>
+                                <NetworkSwitch />
+                            </span>
+
+                            <span className='mt-5 duration-300 select-none opacity-90'>
                                 <DropdownMenu />
                             </span>
 
