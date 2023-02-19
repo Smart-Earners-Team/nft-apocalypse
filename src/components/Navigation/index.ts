@@ -13,7 +13,7 @@ export const farmNavItems = [
 
 export const network = {
     id: `${{}}`,
-    symbol: `BSC`,
+    symbol: ``,
     user: {
         address: ``
     },

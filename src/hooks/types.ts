@@ -1,1 +1,1 @@
-export type Networks = "polygon" | "bsc" | "cronos";
+export type Networks = "Polygon" | "BSC" | "Cronos";

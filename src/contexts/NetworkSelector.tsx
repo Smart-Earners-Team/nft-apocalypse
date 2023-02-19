@@ -50,7 +50,7 @@ const defaultValues: NetworkSelectorType = {
   networkInfo: {
     chainId: 137,
     rpcUrl: "https://polygon-rpc.com/",
-    networkName: "polygon",
+    networkName: "Polygon",
   },
   setNetworkInfo: function (_value: React.SetStateAction<NetworkInfo>): void {},
 };
@@ -62,7 +62,7 @@ function NetworkSelectorProvider({ children }: { children: React.ReactNode }) {
   const [networkInfo, setNetworkInfo] = useState<NetworkInfo>({
     chainId: 137,
     rpcUrl: "https://polygon-rpc.com/",
-    networkName: "polygon",
+    networkName: "Polygon",
   });
 
   const getWalletConnect = useCallback(() => {

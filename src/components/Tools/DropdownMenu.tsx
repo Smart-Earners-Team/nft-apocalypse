@@ -14,9 +14,9 @@ export const networks: {
   network: string,
   name: Networks,
 }[] = [
-  { networkIcon: <SiBinance />, network: "SmartChain", name: "bsc" },
-  { networkIcon: <BiPolygon />, network: "Polygon", name: "polygon" },
-  { networkIcon: <SiChainlink />, network: "Cronos", name: "cronos" },
+  { networkIcon: <SiBinance />, network: "SmartChain", name: "BSC" },
+  { networkIcon: <BiPolygon />, network: "Polygon", name: "Polygon" },
+  { networkIcon: <SiChainlink />, network: "Cronos", name: "Cronos" },
 ];
 
 export const DropdownMenu: React.FC = ({ connected, address }: any) => {
