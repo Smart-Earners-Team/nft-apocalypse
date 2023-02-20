@@ -71,7 +71,8 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
                 <button
                   type="button"
                   className="md:ml-auto ml-2 w-fit px-3 py-2 text-md leading-5 font-medium text-inherit hover:text-inherit focus:outline-none border border-inherit rounded-lg"
-                  onClick={handleMenuToggle}
+                  // this hardcoded BSC should be changed to read the state of the user selected network
+                  onClick={()=>openModal("BSC")}
                 >
                   {
                     connected ? <>{network.symbol} {address}</> : 'Connect Wallet'

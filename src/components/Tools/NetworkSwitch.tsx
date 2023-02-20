@@ -41,10 +41,16 @@ export const NetworkSwitch = () => {
                         <div key={key} className="flex border border-b-2 px-1 py-1">
                             <span className="p-1">{network?.networkIcon}</span>
                             <button
-                                onClick={() => {
-                                    openModal(network?.name);
-                                    handleOptionClick(network?.name || 'Select Network');
-                                }}
+                            // This should only set the state then the connect button would connect based on the selected network
+                            // This is based on the implementation we choose on the call, that the user should only connect using the connect button
+                            // And not by clicking the desired network name
+                            // And as such the connect button maybe disabled until the user selects a network or maybe be prompted to select network if he hasnt already
+                                onClick={() => setSelectedOption(network?.name)
+                                //     {
+                                //     openModal(network?.name);
+                                //     handleOptionClick(network?.name || 'Select Network');
+                                // }
+                            }
                                 className="p-1"
                             >
                                 {network?.network}

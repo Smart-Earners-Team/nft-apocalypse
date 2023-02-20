@@ -91,7 +91,9 @@ export const addresses: { [index: string]: Address } = {
 export const RecognizedChainIdList: RecognizedChainId[] = [1, 2, 3, 4, 42, 56, 97];
 
 export const networkLists: Partial<{ [key in Networks]: SetupNetworkArgs }> = {
-  polygon: {
+  // network names were changed to capital since that what we have in the network types so they match else it wont work
+  // feel free to delete the comments after wards
+  POLYGON: {
     id: "polygon",
     chainId: 137,
     networkName: "Polygon Mainnet",
@@ -103,7 +105,7 @@ export const networkLists: Partial<{ [key in Networks]: SetupNetworkArgs }> = {
     rpcUrls: ["https://polygon-rpc.com/"],
     blockExplorerUrls: ["https://polygonscan.com/"],
   },
-  bsc: {
+  BSC: {
     id: "bsc",
     chainId: 56,
     networkName: "Binance Smart Chain Mainnet",
@@ -129,7 +131,7 @@ export const networkLists: Partial<{ [key in Networks]: SetupNetworkArgs }> = {
     ],
     blockExplorerUrls: ["https://bscscan.com"],
   },
-  cronos: {
+  CRONOS: {
     id: "cronos",
     chainId: 25,
     networkName: "Cronos",
