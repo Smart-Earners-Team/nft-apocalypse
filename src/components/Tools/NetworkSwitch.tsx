@@ -45,7 +45,7 @@ export const NetworkSwitch = () => {
                             // This is based on the implementation we choose on the call, that the user should only connect using the connect button
                             // And not by clicking the desired network name
                             // And as such the connect button maybe disabled until the user selects a network or maybe be prompted to select network if he hasnt already
-                                onClick={() => setSelectedOption(network?.name)
+                                onClick={() => handleOptionClick(network?.name)
                                 //     {
                                 //     openModal(network?.name);
                                 //     handleOptionClick(network?.name || 'Select Network');
