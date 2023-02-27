@@ -36,10 +36,10 @@ export const FarmNavbar = () => {
                     <button>
                         <BiSearch className='text-2xl z-0 cursor-pointer' />
                     </button>
-                    
+
                 </div>
 
-                <LogoImage className='cursor-pointer z-0'/>
+                <LogoImage className='cursor-pointer z-0' />
 
                 <nav className='flex float-right gap-5 z-0'>
                     {farmNavItems.map((val, key) => {

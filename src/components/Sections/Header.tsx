@@ -11,7 +11,7 @@ const Header = () => {
 
             <div className='w-[80%] mx-auto py-3'>
 
-                <div className='text-center mx-auto text-4xl md:text-8xl md:my-7 my-5 whitespace-nowrap overflow-hidden'>
+                <div className='text-center mx-auto text-[32px] md:text-8xl md:my-7 my-5 whitespace-nowrap overflow-hidden'>
                     <Glitch text='NFT APOCALYPSE' />
                 </div>
 
@@ -37,7 +37,7 @@ const Header = () => {
                             strings: ['The first multichain metaverse NFT platform rewarding both holders and digital creators'],
                             autoStart: true,
                             loop: true,
-                            delay: 200,
+                            delay: 100,
                         }}
                     />
                 </div>

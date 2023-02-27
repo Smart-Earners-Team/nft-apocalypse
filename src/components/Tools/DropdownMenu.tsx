@@ -19,7 +19,7 @@ export const networks: {
   { networkIcon: <SiChainlink />, network: "Cronos", name: "Cronos" },
 ];
 
-export const DropdownMenu: React.FC = ({ connected, address }: any) => {
+export const DropdownMenu: React.FC = ({ connected }: any) => {
   const {account} = useActiveWeb3React()
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -47,8 +47,6 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
     setIsOpen(!isOpen);
   };
 
-  address = account;
-
   React.useEffect(() => {
     if (isOpen) {
       document.addEventListener("click", handleClickOutside, true);
@@ -75,7 +73,7 @@ export const DropdownMenu: React.FC = ({ connected, address }: any) => {
                   onClick={()=>openModal("BSC")}
                 >
                   {
-                    connected ? <>{network.symbol} {address}</> : 'Connect Wallet'
+                    connected ? <>{network.symbol} {account}</> : 'Connect Wallet'
                   }
                 </button>
               </span>
