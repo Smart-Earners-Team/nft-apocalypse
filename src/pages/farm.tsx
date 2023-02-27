@@ -120,7 +120,7 @@ const Farm = () => {
 
           {pool.map((item, index) => {
             return (
-              <div key={index} className='container my-5 pl-0 md:pl-6 md:w-4/5 mx-auto'>
+              <div key={index} className='container my-5 pl-0 md:pl-20 md:w-4/5 mx-auto'>
 
                 <div className='relative z-1 rounded-2xl border border-[#AAD5E3] p-2 max-w-full md:w-[22vw] text-center shadow-sm duration-300 ease-in-out'>
                   
