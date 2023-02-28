@@ -6,7 +6,7 @@ exports.onCreatePage = async ({page, actions}) =>{
   
   if(page.path.match(/^\/farm/)){
       createPage({
-          path: "/farm",
+          path: "/farm/id",
           matchPath: "/farm/:id",
           component: path.resolve("src/pages/farm/[id].tsx")
       })
