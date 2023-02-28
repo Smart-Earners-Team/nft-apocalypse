@@ -3,11 +3,12 @@ const path = require("path");
 exports.onCreatePage = async ({page, actions}) =>{
   const {createPage} = actions
   console.log('Page - ' + page.page);
-  if(page.path.match(/^\/stake/)){
+  
+  if(page.path.match(/^\/farm/)){
       createPage({
-          path: "/stake",
-          matchPath: "/stake/:id",
-          component: path.resolve("src/pages/stake.tsx")
+          path: "/farm",
+          matchPath: "/farm/:id",
+          component: path.resolve("src/pages/farm/[id].tsx")
       })
   }
 }
