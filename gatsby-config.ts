@@ -38,23 +38,23 @@ const config: GatsbyConfig = {
         isBaseProvider: false,
       },
     }, {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      "trackingId": "nft-apocalypse"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "./src/assets/icons/icon.png"
-    }
-  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "icon",
-      "path": "./src/assets/icons/"
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        "trackingId": "nft-apocalypse"
+      }
+    }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "./src/assets/icons/icon.png"
+      }
+    }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "icon",
+        "path": "./src/assets/icons/"
+      },
+      __key: "images"
     },
-    __key: "images"
-  },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -63,14 +63,14 @@ const config: GatsbyConfig = {
       },
       __key: "images"
     },
-   {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/"
+      },
+      __key: "pages"
+    }]
 };
 
 export default config;

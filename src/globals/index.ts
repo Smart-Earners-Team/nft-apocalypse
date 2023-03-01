@@ -14,6 +14,7 @@ export interface GlobalTypes {
     onClick?: MouseEventHandler,
     navbar?: boolean,
     farmNavbar?: boolean,
+    stakeNavbar?: boolean,
     footer?: boolean,
 }
 

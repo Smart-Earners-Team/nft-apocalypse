@@ -5,15 +5,17 @@ import { AppWrapper } from './AppWrapper';
 import { ThemeSwitch } from './Tools/ThemeSwitch';
 import { GlobalTypes } from '../globals';
 import { FarmNavbar } from './Navigation/FarmNavbar';
+import { StakeNavbar } from './Navigation/StakeNavbar';
 
 const Layout:React.FC<GlobalTypes> = ( {
     children,
     navbar,
     footer,
-    farmNavbar
+    farmNavbar,
+    stakeNavbar
 } ) => (
 
-    <AppWrapper>
+    <AppWrapper className='min-h-screen'>
 
         <span className='top-[15vw] absolute w-[45vw] h-[50vw] md:h-[80vw] bg-[#89DAF3]/25 blur-[100px] md:blur-[20vw]' />
 
@@ -31,7 +33,15 @@ const Layout:React.FC<GlobalTypes> = ( {
             farmNavbar ? <FarmNavbar /> : null
         }
 
-        {children}
+        {
+            stakeNavbar ? <StakeNavbar /> : null
+        }
+
+        <div className=''>
+            
+            {children}
+
+        </div>
 
         {
             footer ? <Footer /> : null
