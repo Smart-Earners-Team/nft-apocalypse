@@ -31,15 +31,23 @@ export const StakeNavbar = () => {
 
             <div className='px-[10vw] py-2 shadow-2xl flex justify-between'>
 
-                <LogoImage className='cursor-pointer z-0' />
+                <div className='float-left pr-[30px] md:pr-0 md:hidden py-3'>
+                    <button>
+                        <BiSearch className='text-2xl z-0 cursor-pointer' />
+                    </button>
+                </div>
 
-                <div className=''>
+                <div className='align-middle justify-center'>
+                    <LogoImage className='cursor-pointer z-0' />
+                </div>
+
+                <div className='align-middle'>
 
                     <div className="w-full relative gap-2 border border-gray-200 rounded-lg py-3 px-2 mx-auto hidden md:block">
 
                         <input
                             type="text"
-                            className="w-[250px] px-2 text-sm outline-none bg-transparent duration-700 text-inherit text-opacity-70"
+                            className="hidden md:block w-[18vw] px-2 text-sm outline-none bg-transparent duration-700 text-inherit text-opacity-70"
                             placeholder="Search items, collections..."
                             autoFocus
                         />
@@ -66,7 +74,7 @@ export const StakeNavbar = () => {
                 </div>
 
 
-                <nav className='flex float-right gap-5 z-0'>
+                <nav className='flex float-right gap-3'>
                     {stakeNavItems.map((val, key) => {
                         return (
                             <div key={key} className='p-3 md:block hidden'>

@@ -135,7 +135,7 @@ const Farm = () => {
               <div key={index} className='w-full mx-auto relative z-1 rounded-2xl border border-[#AAD5E3] p-2 shadow-sm duration-300 ease-in-out'>
 
                 <div className='rounded-2xl bg-[#D8F2FB]/90 border border-[#AAD5E3] p-2 mx-auto'>
-                  <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[120px] left-[24%] md:left-[24%] select-none pointer-events-none' />
+                  <StaticImage src='../assets/images/robloxNFT.png' alt='roblox' className='w-[120px] left-[22%] md:left-[22%] select-none pointer-events-none' />
                   <Link to={`/farm/${item.id}`}>
                     <Button title={item.name} className='!mx-auto !w-[150px] !bg-white/70 shadow-lg' />
                   </Link>
