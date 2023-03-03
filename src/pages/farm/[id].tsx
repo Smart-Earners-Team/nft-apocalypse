@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
+import { Listbox, Transition } from '@headlessui/react'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+
+const sort = [
+  { order: 'Price low to high' },
+  { order: 'Price high to low' },
+]
 
 type FarmProps = {
   id: string;
@@ -31,6 +38,8 @@ const Farm = ({ id }: FarmProps) => {
   `);
 
   const [isTruncated, setIsTruncated] = useState(true);
+
+  const [selected, setSelected] = useState(sort[0])
 
   const handleShowMore = () => {
     setIsTruncated(false);
@@ -75,7 +84,7 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <section className='mt-[0px] md:mt-[120px] px-[12%] py-2 z-0'>
+        <section className='mt-[0px] md:mt-[130px] px-[12%] py-2 z-0'>
 
           <div className='grid gap-5'>
             <div className='text-xl'>
@@ -100,9 +109,9 @@ const Farm = ({ id }: FarmProps) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             {isTruncated ? (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowMore}>Show more {<BiCaretDown/>}</button>
+              <button className='flex gap-x-5 align-middle' onClick={handleShowMore}>Show more {<BiCaretDown />}</button>
             ) : (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowLess}>Show less {<BiCaretUp/>}</button>
+              <button className='flex gap-x-5 align-middle' onClick={handleShowLess}>Show less {<BiCaretUp />}</button>
             )}
           </div>
 
@@ -127,20 +136,161 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <section className='px-[12%] py-2 grid grid-cols-1 md:grid-cols-3'>
+        <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-2'>
 
-          <div className='flex gap-8 text-xl'>
-            <BiFilter size={30}/>
+          <div className='flex gap-8 text-xl align-baseline mt-1'>
+            <BiFilter size={30} />
             <span className='text-red-600'>Items</span>
             <span>Activity</span>
           </div>
 
-          <div></div>
+          <div className='flex md:pl-5'>
 
-          <div></div>
+            <div className="w-full relative gap-2 border border-inherit rounded-lg py-3 px-2 mx-auto h-fit">
+
+              <input
+                type="text"
+                className="w-full px-2 text-sm outline-none bg-transparent duration-700 text-inherit text-opacity-70"
+                placeholder="Search items, collections..."
+                autoFocus
+              />
+
+              <button className="text-slate-50 absolute top-0 right-0 bg-[#89daf3] hover:bg-[#65c5e2] duration-300 py-[7px] px-[10px] h-full rounded-r-md">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+
+            </div>
+
+            <div className="w-fit border border-inherit rounded-lg mx-2 md:block hidden">
+              <Listbox value={selected} onChange={setSelected}>
+                <div className="relative mt-1">
+                  <Listbox.Button className="relative w-full cursor-pointer bg-inherit py-2 pl-3 pr-10 text-left sm:text-sm">
+                    <span className="block truncate">{selected.order}</span>
+                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                      <ChevronUpDownIcon
+                        className="h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </Listbox.Button>
+                  <Transition
+                    as={Fragment}
+                    leave="transition ease-in duration-100"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <Listbox.Options className="absolute mt-1 max-h-60 w-fit overflow-hidden bg-inherit py-2 px-3 focus:outline-none sm:text-sm">
+                      {sort.map((sort, key) => (
+                        <Listbox.Option
+                          key={key}
+                          className={({ active }) =>
+                            `relative cursor-pointer select-none py-3 px-2 ${active ? '' : ''
+                            }`
+                          }
+                          value={sort}
+                        >
+                          {({ selected }) => (
+                            <>
+                              <span
+                                className={`block truncate ${selected ? 'font-medium' : 'font-normal'
+                                  }`}
+                              >
+                                {sort.order}
+                              </span>
+                              {selected ? (
+                                <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                                  {/* <CheckIcon className="h-5 w-5" aria-hidden="true" /> */}
+                                </span>
+                              ) : null}
+                            </>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </Transition>
+                </div>
+              </Listbox>
+            </div>
+
+          </div>
 
         </section>
-        
+
+        <div className='divider'/>
+
+        <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-3'>
+
+          <div className='col-span-1 grid gap-5'>
+
+            <div className='md:grid sm:hidden gap-5'>
+
+              <div className='grid grid-cols-2 mb-5'>
+                <span className='text-xl'>Status</span>
+                <span><BiCaretUp /></span>
+              </div>
+
+              <div className='grid grid-cols-2'>
+                <span className='text-sm'>Buy Now</span>
+                <span className='transition-all duration-300'>
+                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
+                </span>
+              </div>
+
+              <div className='grid grid-cols-2'>
+                <span className='text-sm'>On Auction</span>
+                <span className='transition-all duration-300'>
+                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
+                </span>
+              </div>
+
+              <div className='grid grid-cols-2'>
+                <span className='text-sm'>Has Offers</span>
+                <span className='transition-all duration-300'>
+                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
+                </span>
+              </div>
+
+              <div className='grid grid-cols-2'>
+                <span className='text-sm'>New</span>
+                <span className='transition-all duration-300'>
+                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
+                </span>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div className='grid grid-cols-2 mb-5'>
+                <span className='text-xl'>Price Range</span>
+                <span><BiCaretUp /></span>
+              </div>
+
+              <div>
+                
+              </div>
+
+            </div>
+          
+          </div>
+
+          <div className='col-span-2'></div>
+
+        </section>
+
       </Layout>
     </React.Fragment>
   );

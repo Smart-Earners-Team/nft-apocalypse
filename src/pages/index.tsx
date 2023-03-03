@@ -16,7 +16,7 @@ export default function IndexPage() {
         <title>NFTX</title>
       </Helmet>
       <Layout navbar footer>
-        <Header/>
+        <Header />
         <div className='mx-auto md:mx-32'>
           <Intro />
           <Utility />
