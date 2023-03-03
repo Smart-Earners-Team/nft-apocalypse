@@ -6,6 +6,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import Button from '../../components/Buttons/Button';
 
 const sort = [
   { order: 'Price low to high' },
@@ -16,26 +17,24 @@ type FarmProps = {
   id: string;
 };
 
-type FileNode = {
-  childImageSharp: {
-    gatsbyImageData: IGatsbyImageData;
-  };
-};
-
-type QueryResult = {
-  file: FileNode;
-};
-
 const Farm = ({ id }: FarmProps) => {
-  const data = useStaticQuery<QueryResult>(graphql`
+  const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "catlia.jpg" }) {
+      catlia: file(relativePath: { eq: "catlia.jpg" }) {
         childImageSharp {
           gatsbyImageData
         }
-      }
+      },
+      ape: file(relativePath: { eq: "ape.jpg" }) {
+        childImageSharp {
+          gatsbyImageData
+        }
+      },
     }
-  `);
+  `)
+
+  const bgImage = getImage(data.catlia)
+  const apeImage = getImage(data.ape)
 
   const [isTruncated, setIsTruncated] = useState(true);
 
@@ -48,8 +47,6 @@ const Farm = ({ id }: FarmProps) => {
   const handleShowLess = () => {
     setIsTruncated(true);
   };
-
-  const bgImage = getImage(data.file);
 
   return (
     <React.Fragment>
@@ -144,7 +141,7 @@ const Farm = ({ id }: FarmProps) => {
             <span>Activity</span>
           </div>
 
-          <div className='flex md:pl-5'>
+          <div className='flex md:pl-3'>
 
             <div className="w-full relative gap-2 border border-inherit rounded-lg py-3 px-2 mx-auto h-fit">
 
@@ -279,15 +276,38 @@ const Farm = ({ id }: FarmProps) => {
                 <span><BiCaretUp /></span>
               </div>
 
-              <div>
-                
+              <div className='text-center grid grid-cols-1'>
+                <span className='flex py-1 px-2'>
+                  <button className='px-4 py-2 bg-slate-400/20 hover:bg-slate-400/30 rounded-xl text-sm'>Min</button>
+                  <label className='px-3 py-2 bg-inherit text-sm'>to</label>
+                  <button className='px-4 py-2 bg-slate-400/20 hover:bg-slate-400/30 rounded-xl text-sm'>Max</button>
+                </span>
+                <Button title='Apply' variant='primary' className='!w-40 !text-center'/>
               </div>
 
             </div>
           
           </div>
 
-          <div className='col-span-2'></div>
+          <div className='col-span-2 py-5'>
+
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-sm' />
+
+                <div className='rounded-lg h-fit absolute top-6 right-6 w-[45px] bg-cover bg-gradient-to-b from-[#89DAF3] to-[#FECEA3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div></div>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </section>
 
