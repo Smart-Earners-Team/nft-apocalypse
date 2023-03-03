@@ -37,7 +37,7 @@ const Layout:React.FC<GlobalTypes> = ( {
             stakeNavbar ? <StakeNavbar /> : null
         }
 
-        <div className='relative z-50'>
+        <div className='relative z-0'>
             
             {children}
 

@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { BiCaretDown, BiCaretUp } from 'react-icons/bi';
+import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
 
 type FarmProps = {
   id: string;
@@ -54,14 +54,14 @@ const Farm = ({ id }: FarmProps) => {
         <section className='pb-2 z-0'>
 
           <div className='h-[40vh] md:h-[65vh] w-full justify-items-center overflow-hidden'>
-            <GatsbyImage image={bgImage!} alt='' className='w-full opacity-90 rounded-lg -top-[50%] md:-top-[80%] z-0 blur-sm md:blur-md' />
+            <GatsbyImage image={bgImage!} alt='' className='w-full opacity-90 rounded-lg -top-[50%] md:-top-[80%] -z-[9999] blur-sm md:blur-md' />
           </div>
 
-          <div className='h-fit absolute top-[26%] md:top-[30%] left-[10%] w-[30%] md:w-[20%] rounded-[30px] md:rounded-[60px] bg-cover bg-gradient-to-b from-[#887d748b] to-[#FECEA3] p-2'>
+          <div className='h-fit absolute top-[165px] md:top-[250px] left-[10%] w-[30%] md:w-[20%] rounded-[30px] md:rounded-[60px] bg-cover bg-gradient-to-b from-[#887d748b] to-[#FECEA3] p-2'>
             <GatsbyImage image={bgImage!} alt='' className='rounded-[30px] md:rounded-[60px]' />
           </div>
 
-          <div className='absolute top-[5%] right-[15%] py-8 md:py-16 z-0'>
+          <div className='absolute top-[35px] right-[15%] py-8 md:py-16 z-0'>
 
             <span className='uppercase block text-2xl md:text-5xl py-1'>
               NFT&nbsp;<span className='text-[red]'>Apocalypse</span>
@@ -75,7 +75,7 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <section className='mt-[20%] md:mt-[12%] px-[12%] py-2 z-0'>
+        <section className='mt-[70px] md:mt-[120px] px-[12%] py-2 z-0'>
 
           <div className='grid gap-5'>
             <div className='text-xl'>
@@ -100,15 +100,15 @@ const Farm = ({ id }: FarmProps) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             {isTruncated ? (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowMore}>Show More {<BiCaretDown/>}</button>
+              <button className='flex gap-x-5 align-middle' onClick={handleShowMore}>Show more {<BiCaretDown/>}</button>
             ) : (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowLess}>Show Less {<BiCaretUp/>}</button>
+              <button className='flex gap-x-5 align-middle' onClick={handleShowLess}>Show less {<BiCaretUp/>}</button>
             )}
           </div>
 
         </section>
 
-        <section className='px-[12%] py-2 grid grid-cols-7'>
+        <section className='px-[12%] py-2 grid grid-cols-3 md:grid-cols-7'>
 
           <div className='grid gap-3'>
             <span className='font-bold text-xl'>3452k</span>
@@ -116,14 +116,28 @@ const Farm = ({ id }: FarmProps) => {
           </div>
 
           <div className='grid gap-3'>
-            <span className='font-bold text-xl'>3452k</span>
-            <span>Total Volume</span>
+            <span className='font-bold text-xl'>2.98</span>
+            <span>Floor Price</span>
           </div>
 
           <div className='grid gap-3'>
-            <span className='font-bold text-xl'>3452k</span>
-            <span>Total Volume</span>
+            <span className='font-bold text-xl'>0.91</span>
+            <span>Best Offer</span>
           </div>
+
+        </section>
+
+        <section className='px-[12%] py-2 grid grid-cols-1 md:grid-cols-3'>
+
+          <div className='flex gap-8 text-xl'>
+            <BiFilter size={30}/>
+            <span className='text-red-600'>Items</span>
+            <span>Activity</span>
+          </div>
+
+          <div></div>
+
+          <div></div>
 
         </section>
         

@@ -31,12 +31,12 @@ export const NetworkSwitch = () => {
     };
 
     return (
-        <div className="dropdown inline-block z-0">
+        <div className="dropdown inline-block">
             <button onClick={() => setDropdownOpen(!dropdownOpen)}>
                 {selectedOption} <span>&#9662;</span>
             </button>
             {dropdownOpen && (
-                <div className="z-0 dropdown-content bg-inherit/30 backdrop-blur-xl">
+                <div className="relative z-50 dropdown-content bg-inherit/30 backdrop-blur-xl">
                     {networks.map((network, key) => (
                         <div key={key} className="flex border border-b-2 px-1 py-1">
                             <span className="p-1">{network?.networkIcon}</span>
