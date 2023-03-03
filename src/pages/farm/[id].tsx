@@ -297,20 +297,196 @@ const Farm = ({ id }: FarmProps) => {
 
                 <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
 
-                <div className='rounded-lg h-fit absolute top-6 right-5 w-[50px] bg-cover bg-gradient-to-b from-[#89DAF3] to-[#FECEA3] p-1'>
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
                   <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
                 </div>
 
-                <div className='my-2 grid justify-center'>
-                  <div className='text-xl'>Majestic APO</div>
-                  <div className='font-bold'>294</div>
-                  <span className='font-thin'>Ends in 15hrs</span>
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-lg'>Majestic APO</div>
+                  <div className='text-lg font-bold'>294</div>
+                  <span className='text-sm'>Ends in 15hrs</span>
                 </div>
 
               </div>
 
             </div>
-
+            
           </div>
 
         </section>
@@ -321,9 +497,3 @@ const Farm = ({ id }: FarmProps) => {
 };
 
 export default Farm;
-
-{/* <section className='px-[12%] py-2'>
-          <div>
-
-          </div>
-        </section> */}
