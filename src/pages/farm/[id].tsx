@@ -53,7 +53,7 @@ const Farm = ({ id }: FarmProps) => {
 
         <section className='pb-2 z-0'>
 
-          <div className='h-[40vh] md:h-[65vh] w-full justify-items-center overflow-hidden'>
+          <div className='h-[300px] md:h-[380px] w-full justify-items-center overflow-hidden'>
             <GatsbyImage image={bgImage!} alt='' className='w-full opacity-90 rounded-lg -top-[50%] md:-top-[80%] -z-[9999] blur-sm md:blur-md' />
           </div>
 
@@ -75,7 +75,7 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <section className='mt-[70px] md:mt-[120px] px-[12%] py-2 z-0'>
+        <section className='mt-[0px] md:mt-[120px] px-[12%] py-2 z-0'>
 
           <div className='grid gap-5'>
             <div className='text-xl'>
