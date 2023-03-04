@@ -36,17 +36,17 @@ const Farm = ({ id }: FarmProps) => {
   const bgImage = getImage(data.catlia)
   const apeImage = getImage(data.ape)
 
-  const [isTruncated, setIsTruncated] = useState(true);
+  // const [isTruncated, setIsTruncated] = useState(true);
 
   const [selected, setSelected] = useState(sort[0])
 
-  const handleShowMore = () => {
-    setIsTruncated(false);
-  };
+  // const handleShowMore = () => {
+  //   setIsTruncated(false);
+  // };
 
-  const handleShowLess = () => {
-    setIsTruncated(true);
-  };
+  // const handleShowLess = () => {
+  //   setIsTruncated(true);
+  // };
 
   return (
     <React.Fragment>
@@ -74,7 +74,7 @@ const Farm = ({ id }: FarmProps) => {
             </span>
 
             <span className='float-right -mr-[10%] py-1 text-sm md:text-xl'>
-              By Isaac John
+              By Peter Parker
             </span>
 
           </div>
@@ -86,18 +86,18 @@ const Farm = ({ id }: FarmProps) => {
           <div className='grid gap-5'>
             <div className='text-xl'>
               NFT APOCALYPSE
-              <div className='text-sm'>By Isaac John</div>
+              <div className='text-sm'>By Peter Parker</div>
             </div>
             <div className='flex flex-wrap gap-x-8 text-xl my-2'>
-              <div className='flex gap-x-3'>Unique Items <span className='font-bold'>{'6'}</span></div>
-              <div className='flex gap-x-3'>Total Items <span className='font-bold'>{'733'}</span></div>
-              <div className='flex gap-x-3'>Chain <span className='font-bold'>{'Ethereum'}</span></div>
+              <div className='flex gap-x-3'>APR <span className='font-bold'>{`${'6'}%`}</span></div>
+              <div className='flex gap-x-3'>TVL <span className='font-bold'>{`$${'733'}`}</span></div>
+              <div className='flex gap-x-3'>Chain <span className='font-bold'>{`${'Ethereum'}`}</span></div>
             </div>
           </div>
 
         </section>
 
-        <section className='px-[12%] py-2'>
+        {/* <section className='px-[12%] py-2'>
           <div className="w-full">
             <div
               className={`text-inherit overflow-hidden ${isTruncated ? "max-h-24" : ""}`}
@@ -112,36 +112,37 @@ const Farm = ({ id }: FarmProps) => {
             )}
           </div>
 
-        </section>
-
-        <section className='px-[12%] py-2 grid grid-cols-3 md:grid-cols-7'>
-
-          <div className='grid gap-3'>
-            <span className='font-bold text-xl'>3452k</span>
-            <span>Total Volume</span>
-          </div>
-
-          <div className='grid gap-3'>
-            <span className='font-bold text-xl'>2.98</span>
-            <span>Floor Price</span>
-          </div>
-
-          <div className='grid gap-3'>
-            <span className='font-bold text-xl'>0.91</span>
-            <span>Best Offer</span>
-          </div>
-
-        </section>
+        </section> */}
 
         <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-2'>
 
-          <div className='flex gap-8 text-xl align-baseline mt-1'>
-            <BiFilter size={30} />
-            <span className='text-red-600'>Items</span>
-            <span>Activity</span>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-2 align-middle my-2'>
+
+            <div className='flex gap-5'>
+
+              <div className='flex flex-wrap gap-2 align-middle text-center'>
+                <span className='font-bold text-xl'>Staked</span>
+                <span className='align-middle mt-1'>{`${'5'}`}</span>
+              </div>
+
+              <div className='flex flex-wrap gap-2 align-middle text-center'>
+                <span className='font-bold text-xl'>Earned</span>
+                <span className='align-middle mt-1'>{`${'2'} ${'BNB'}`}</span>
+              </div>
+            
+            </div>
+
+            <div className='flex'>
+
+              <Button title='Stake' className='!text-inherit !bg-[#89DAF3]/20' />
+              <Button title='Unstake' className='!text-inherit !bg-[#89DAF3]/20' />
+              <Button title='Harvest' className='!text-inherit !bg-[#89DAF3]/20' />
+              
+            </div>
+
           </div>
 
-          <div className='flex md:pl-3'>
+          <div className='flex md:pl-2 align-middle my-2'>
 
             <div className="w-full relative gap-2 border border-inherit rounded-lg py-3 px-2 mx-auto h-fit">
 
@@ -171,7 +172,7 @@ const Farm = ({ id }: FarmProps) => {
 
             </div>
 
-            <div className="w-fit border border-inherit rounded-lg mx-2 md:block hidden">
+            <div className="w-fit h-fit border border-inherit rounded-lg mx-2 md:block hidden">
               <Listbox value={selected} onChange={setSelected}>
                 <div className="relative mt-1">
                   <Listbox.Button className="relative w-full cursor-pointer bg-inherit py-2 pl-3 pr-10 text-left sm:text-sm">
@@ -226,7 +227,7 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <div className='divider'/>
+        <div className='divider' />
 
         <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-3'>
 
@@ -282,11 +283,11 @@ const Farm = ({ id }: FarmProps) => {
                   <label className='px-3 py-2 bg-inherit text-sm'>to</label>
                   <button className='px-4 py-2 bg-slate-400/20 hover:bg-slate-400/30 rounded-xl text-sm'>Max</button>
                 </span>
-                <Button title='Apply' variant='primary' className='!w-40 !text-center'/>
+                <Button title='Apply' variant='primary' className='!w-40 !text-center' />
               </div>
 
             </div>
-          
+
           </div>
 
           <div className='col-span-2 py-5'>
@@ -486,7 +487,7 @@ const Farm = ({ id }: FarmProps) => {
               </div>
 
             </div>
-            
+
           </div>
 
         </section>
