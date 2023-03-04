@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div>
 
-        <div className='border border-slate-100 my-5'/>
+        <div className='divider'/>
 
         <div className='text-center pb-5'>
           

@@ -55,7 +55,7 @@ const Farm = ({ id }: FarmProps) => {
         <title>{id}</title>
       </Helmet>
 
-      <Layout stakeNavbar>
+      <Layout stakeNavbar footer>
 
         <section className='pb-2 z-0'>
 
