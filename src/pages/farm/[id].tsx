@@ -3,21 +3,51 @@ import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-// import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
-// import { Listbox, Transition } from '@headlessui/react'
-// import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import Button from '../../components/Buttons/Button';
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
+import { GlobalTypes } from '../../globals';
+import Button from '../../components/Buttons/Button';
+import { FaTimes } from 'react-icons/fa'
 
-const sort = [
-  { order: 'Price low to high' },
-  { order: 'Price high to low' },
-]
+// const sort = [
+//   { order: 'Price low to high' },
+//   { order: 'Price high to low' },
+// ]
 
 type FarmProps = {
   id: string;
 };
+
+interface ModalProps extends GlobalTypes {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, className }) => {
+  const overlayClass = isOpen
+    ? 'fixed inset-0 bg-gray-800 opacity-50 z-50'
+    : 'hidden';
+
+  const modalClass = isOpen
+    ? 'fixed inset-0 flex items-center justify-center z-50'
+    : 'hidden';
+
+  // Add these classes to center the modal horizontally and vertically
+  const centeredClass = 'sm:max-w-lg sm:max-h-screen sm:mx-auto sm:my-auto';
+  const transformClass = 'sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2';
+
+  return (
+    <>
+      <div className={overlayClass} onClick={onClose}></div>
+      <div className={modalClass}>
+        <div className={`${className} bg-white rounded-lg shadow-lg p-6 ${centeredClass} ${transformClass}`}>
+          {children}
+        </div>
+      </div>
+    </>
+  );
+};
+
 
 const Farm = ({ id }: FarmProps) => {
   const data = useStaticQuery(graphql`
@@ -38,17 +68,15 @@ const Farm = ({ id }: FarmProps) => {
   const bgImage = getImage(data.catlia)
   const apeImage = getImage(data.ape)
 
-  // const [isTruncated, setIsTruncated] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [selected, setSelected] = useState(sort[0])
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
-  // const handleShowMore = () => {
-  //   setIsTruncated(false);
-  // };
-
-  // const handleShowLess = () => {
-  //   setIsTruncated(true);
-  // };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <React.Fragment>
@@ -95,23 +123,6 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        {/* <section className='px-[12%] py-2'>
-          <div className="w-full">
-            <div
-              className={`text-inherit overflow-hidden ${isTruncated ? "max-h-24" : ""}`}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-            {isTruncated ? (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowMore}>Show more {<BiCaretDown />}</button>
-            ) : (
-              <button className='flex gap-x-5 align-middle' onClick={handleShowLess}>Show less {<BiCaretUp />}</button>
-            )}
-          </div>
-
-        </section> */}
-
         <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-2'>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-2 align-middle my-2'>
@@ -145,65 +156,6 @@ const Farm = ({ id }: FarmProps) => {
         <div className='divider' />
 
         <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-3'>
-
-          {/* <div className='col-span-1 grid gap-5'>
-
-            <div className='md:grid sm:hidden gap-5'>
-
-              <div className='grid grid-cols-2 mb-5'>
-                <span className='text-xl'>Status</span>
-                <span><BiCaretUp /></span>
-              </div>
-
-              <div className='grid grid-cols-2'>
-                <span className='text-sm'>Buy Now</span>
-                <span className='transition-all duration-300'>
-                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
-                </span>
-              </div>
-
-              <div className='grid grid-cols-2'>
-                <span className='text-sm'>On Auction</span>
-                <span className='transition-all duration-300'>
-                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
-                </span>
-              </div>
-
-              <div className='grid grid-cols-2'>
-                <span className='text-sm'>Has Offers</span>
-                <span className='transition-all duration-300'>
-                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
-                </span>
-              </div>
-
-              <div className='grid grid-cols-2'>
-                <span className='text-sm'>New</span>
-                <span className='transition-all duration-300'>
-                  <input type="checkbox" className="rounded-md h-5 w-5 bg-[#89DAF3]" />
-                </span>
-              </div>
-
-            </div>
-
-            <div>
-
-              <div className='grid grid-cols-2 mb-5'>
-                <span className='text-xl'>Price Range</span>
-                <span><BiCaretUp /></span>
-              </div>
-
-              <div className='text-center grid grid-cols-1'>
-                <span className='flex py-1 px-2'>
-                  <button className='px-4 py-2 bg-slate-400/20 hover:bg-slate-400/30 rounded-xl text-sm'>Min</button>
-                  <label className='px-3 py-2 bg-inherit text-sm'>to</label>
-                  <button className='px-4 py-2 bg-slate-400/20 hover:bg-slate-400/30 rounded-xl text-sm'>Max</button>
-                </span>
-                <Button title='Apply' variant='primary' className='!w-40 !text-center' />
-              </div>
-
-            </div>
-
-          </div> */}
 
           <div className='col-span-4 py-5'>
 
@@ -270,52 +222,7 @@ const Farm = ({ id }: FarmProps) => {
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md'>Majestic APO 294</div>
-                  <Button variant='secondary' className='text-sm'>Unstake</Button>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3  mx-2'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <Button variant='secondary' className='text-sm'>Unstake</Button>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <Button variant='secondary' className='text-sm'>Unstake</Button>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <Button variant='secondary' className='text-sm'>Unstake</Button>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
               </div>
@@ -325,6 +232,11 @@ const Farm = ({ id }: FarmProps) => {
           </div>
 
         </section>
+
+        <Modal className='text-slate-700' isOpen={isModalOpen} onClose={handleCloseModal}>
+          Hello
+          <FaTimes className='cursor-pointer' onClick={handleCloseModal} />
+        </Modal>
 
       </Layout>
     </React.Fragment>
