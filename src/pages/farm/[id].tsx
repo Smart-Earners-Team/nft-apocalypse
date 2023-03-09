@@ -3,10 +3,12 @@ import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
-import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+// import { BiCaretDown, BiCaretUp, BiFilter } from 'react-icons/bi';
+// import { Listbox, Transition } from '@headlessui/react'
+// import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import Button from '../../components/Buttons/Button';
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css';
 
 const sort = [
   { order: 'Price low to high' },
@@ -84,10 +86,6 @@ const Farm = ({ id }: FarmProps) => {
         <section className='mt-[0px] md:mt-[130px] px-[12%] py-2 z-0'>
 
           <div className='grid gap-5'>
-            <div className='text-xl'>
-              NFT APOCALYPSE
-              <div className='text-sm'>By Peter Parker</div>
-            </div>
             <div className='flex flex-wrap gap-x-8 text-xl my-2'>
               <div className='flex gap-x-3'>APR <span className='font-bold'>{`${'6'}%`}</span></div>
               <div className='flex gap-x-3'>TVL <span className='font-bold'>{`$${'733'}`}</span></div>
@@ -142,96 +140,13 @@ const Farm = ({ id }: FarmProps) => {
 
           </div>
 
-          <div className='flex md:pl-2 align-middle my-2'>
-
-            <div className="w-full relative gap-2 border border-inherit rounded-lg py-3 px-2 mx-auto h-fit">
-
-              <input
-                type="text"
-                className="w-full px-2 text-sm outline-none bg-transparent duration-700 text-inherit text-opacity-70"
-                placeholder="Search items, collections..."
-                autoFocus
-              />
-
-              <button className="text-slate-50 absolute top-0 right-0 bg-[#89daf3] hover:bg-[#65c5e2] duration-300 py-[7px] px-[10px] h-full rounded-r-md">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-
-            </div>
-
-            <div className="w-fit h-fit border border-inherit rounded-lg mx-2 md:block hidden">
-              <Listbox value={selected} onChange={setSelected}>
-                <div className="relative mt-1">
-                  <Listbox.Button className="relative w-full cursor-pointer bg-inherit py-2 pl-3 pr-10 text-left sm:text-sm">
-                    <span className="block truncate">{selected.order}</span>
-                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                      <ChevronUpDownIcon
-                        className="h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </Listbox.Button>
-                  <Transition
-                    as={Fragment}
-                    leave="transition ease-in duration-100"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                  >
-                    <Listbox.Options className="absolute mt-1 max-h-60 w-fit overflow-hidden bg-inherit py-2 px-3 focus:outline-none sm:text-sm">
-                      {sort.map((sort, key) => (
-                        <Listbox.Option
-                          key={key}
-                          className={({ active }) =>
-                            `relative cursor-pointer select-none py-3 px-2 ${active ? '' : ''
-                            }`
-                          }
-                          value={sort}
-                        >
-                          {({ selected }) => (
-                            <>
-                              <span
-                                className={`block truncate ${selected ? 'font-medium' : 'font-normal'
-                                  }`}
-                              >
-                                {sort.order}
-                              </span>
-                              {selected ? (
-                                <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                                  {/* <CheckIcon className="h-5 w-5" aria-hidden="true" /> */}
-                                </span>
-                              ) : null}
-                            </>
-                          )}
-                        </Listbox.Option>
-                      ))}
-                    </Listbox.Options>
-                  </Transition>
-                </div>
-              </Listbox>
-            </div>
-
-          </div>
-
         </section>
 
         <div className='divider' />
 
         <section className='px-[12%] py-2 md:py-5 grid grid-cols-1 md:grid-cols-3'>
 
-          <div className='col-span-1 grid gap-5'>
+          {/* <div className='col-span-1 grid gap-5'>
 
             <div className='md:grid sm:hidden gap-5'>
 
@@ -288,77 +203,64 @@ const Farm = ({ id }: FarmProps) => {
 
             </div>
 
-          </div>
+          </div> */}
 
-          <div className='col-span-2 py-5'>
+          <div className='col-span-4 py-5'>
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+            <div className='text-center font-bold text-2xl py-2 px-2'>Staked</div>
 
-              <div className='border border-inherit rounded-3xl p-3 relative'>
+            <Carousel
+              autoPlay={false}
+              additionalTransfrom={0}
+              arrows={true}
+              // autoPlaySpeed={3000}
+              centerMode={false}
+              className="my-5"
+              containerClass=""
+              dotListClass="border-none"
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024
+                  },
+                  items: 4
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 740,
+                    min: 0
+                  },
+                  items: 2
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 740
+                  },
+                  items: 3
+                }
+              }}
+              rewind={false}
+              rewindWithAnimation={false}
+              rtl={false}
+              shouldResetAutoplay
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
                 <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
 
@@ -367,14 +269,13 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <Button variant='secondary' className='text-sm'>Unstake</Button>
                 </div>
 
               </div>
 
-              <div className='border border-inherit rounded-3xl p-3 relative'>
+              <div className='border border-inherit rounded-3xl p-3  mx-2'>
 
                 <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
 
@@ -383,14 +284,13 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <Button variant='secondary' className='text-sm'>Unstake</Button>
                 </div>
 
               </div>
 
-              <div className='border border-inherit rounded-3xl p-3 relative'>
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
                 <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
 
@@ -399,14 +299,13 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <Button variant='secondary' className='text-sm'>Unstake</Button>
                 </div>
 
               </div>
 
-              <div className='border border-inherit rounded-3xl p-3 relative'>
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
                 <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
 
@@ -415,78 +314,13 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <Button variant='secondary' className='text-sm'>Unstake</Button>
                 </div>
 
               </div>
 
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-              <div className='border border-inherit rounded-3xl p-3 relative'>
-
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
-
-                <div className='my-3 grid justify-center'>
-                  <div className='text-lg'>Majestic APO</div>
-                  <div className='text-lg font-bold'>294</div>
-                  <span className='text-sm'>Ends in 15hrs</span>
-                </div>
-
-              </div>
-
-            </div>
+            </Carousel>
 
           </div>
 
