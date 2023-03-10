@@ -227,15 +227,193 @@ const Farm = ({ id }: FarmProps) => {
 
               </div>
 
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+            </Carousel>
+
+            <Carousel
+              autoPlay={false}
+              additionalTransfrom={0}
+              arrows={true}
+              // autoPlaySpeed={3000}
+              centerMode={false}
+              className="my-5"
+              containerClass=""
+              dotListClass="border-none"
+              draggable
+              focusOnSelect={false}
+              infinite
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={{
+                desktop: {
+                  breakpoint: {
+                    max: 3000,
+                    min: 1024
+                  },
+                  items: 4
+                },
+                mobile: {
+                  breakpoint: {
+                    max: 740,
+                    min: 0
+                  },
+                  items: 2
+                },
+                tablet: {
+                  breakpoint: {
+                    max: 1024,
+                    min: 740
+                  },
+                  items: 3
+                }
+              }}
+              rewind={false}
+              rewindWithAnimation={false}
+              rtl={false}
+              shouldResetAutoplay
+              showDots={false}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
+              <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
+
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
+
+                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
+                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
+                </div>
+
+                <div className='my-3 grid justify-center'>
+                  <div className='text-md'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                </div>
+
+              </div>
+
             </Carousel>
 
           </div>
 
         </section>
 
-        <Modal className='text-slate-700' isOpen={isModalOpen} onClose={handleCloseModal}>
-          Hello
-          <FaTimes className='cursor-pointer' onClick={handleCloseModal} />
+        <Modal className='text-slate-700 relative' isOpen={isModalOpen} onClose={handleCloseModal}>
+          <div className='text-center'>
+            <div className='my-3 text-xl'>Stake NFTx</div>
+            <div>
+              <div className='grid grid-cols-10 gap-3 my-5 px-1 text-sm'>
+                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>{'<'}</button>
+                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
+                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
+                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
+                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
+                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
+                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
+                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
+                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
+                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>{'>'}</button>
+              </div>
+              {/* <div>
+                <input type='text' className='' placeholder=''/>
+              </div> */}
+              <Button className='!w-full'>Select All</Button>
+            </div>
+          </div>
+          <FaTimes className='cursor-pointer absolute top-3 right-3' onClick={handleCloseModal} />
         </Modal>
 
       </Layout>
