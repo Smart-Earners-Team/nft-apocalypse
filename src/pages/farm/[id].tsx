@@ -25,22 +25,21 @@ interface ModalProps extends GlobalTypes {
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, className }) => {
   const overlayClass = isOpen
-    ? 'fixed inset-0 bg-gray-800 opacity-50 z-50'
+    ? 'fixed inset-0 bg-gray-800 opacity-50 z-50 mx-2'
     : 'hidden';
 
   const modalClass = isOpen
-    ? 'fixed inset-0 flex items-center justify-center z-50'
+    ? 'fixed inset-0 flex items-center justify-center z-50 mx-2'
     : 'hidden';
 
   // Add these classes to center the modal horizontally and vertically
   const centeredClass = 'sm:max-w-lg sm:max-h-screen sm:mx-auto sm:my-auto';
-  const transformClass = 'sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2';
 
   return (
     <>
       <div className={overlayClass} onClick={onClose}></div>
       <div className={modalClass}>
-        <div className={`${className} bg-white rounded-lg shadow-lg p-6 ${centeredClass} ${transformClass}`}>
+        <div className={`${className} bg-white rounded-3xl shadow-lg p-6 ${centeredClass}`}>
           {children}
         </div>
       </div>
@@ -167,7 +166,7 @@ const Farm = ({ id }: FarmProps) => {
               arrows={true}
               // autoPlaySpeed={3000}
               centerMode={false}
-              className="my-5"
+              className="my-5 z-0"
               containerClass=""
               dotListClass="border-none"
               draggable
@@ -280,7 +279,7 @@ const Farm = ({ id }: FarmProps) => {
               arrows={true}
               // autoPlaySpeed={3000}
               centerMode={false}
-              className="my-5"
+              className="my-5 z-0"
               containerClass=""
               dotListClass="border-none"
               draggable
@@ -393,27 +392,33 @@ const Farm = ({ id }: FarmProps) => {
 
         <Modal className='text-slate-700 relative' isOpen={isModalOpen} onClose={handleCloseModal}>
           <div className='text-center'>
-            <div className='my-3 text-xl'>Stake NFTx</div>
-            <div>
-              <div className='grid grid-cols-10 gap-3 my-5 px-1 text-sm'>
-                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>{'<'}</button>
-                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
-                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
-                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
-                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
-                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
-                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
-                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>9</button>
-                <button className='rounded-xl ring ring-[#01A4F1] px-3 py-2'>7</button>
-                <button className='rounded-xl ring ring-[#c92d2d] px-3 py-2'>{'>'}</button>
+            <div className='my-5 text-xl'>Stake NFTx</div>
+            <div className='my-2'>
+              <div className='grid grid-cols-7 gap-5 my-7 px-2 text-xs md:text-sm'>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>{'<'}</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>7</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>33</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>12</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>52</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>100</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>{'>'}</button>
               </div>
               {/* <div>
                 <input type='text' className='' placeholder=''/>
               </div> */}
               <Button className='!w-full'>Select All</Button>
             </div>
+
+            <div className='grid gap-5 mt-5'>
+              <span className='text-left pl-3 text-xs opacity-70'>Annual ROI at current rates: $0.00</span>
+              <div className='grid grid-cols-3'>
+                <button className='rounded-xl float-left px-2 py-3 text-sm bg-[#EC1F38]' onClick={handleCloseModal}>Cancel</button>
+                <div/>
+                <button className='rounded-xl float-right px-3 py-2 text-sm bg-[#5ECF0D]'>Confirm</button>
+              </div>
+            </div>
           </div>
-          <FaTimes className='cursor-pointer absolute top-3 right-3' onClick={handleCloseModal} />
+          <FaTimes className='cursor-pointer absolute top-5 right-5' onClick={handleCloseModal} />
         </Modal>
 
       </Layout>
