@@ -274,7 +274,7 @@ const Farm = ({ id }: FarmProps) => {
 
             </Carousel>
 
-            <div className='text-center font-bold text-2xl py-2 px-2'>Available</div>
+            <div className='text-center font-bold text-2xl py-2 px-2'>Available <span className='text-sm'>(Remaining in collection)</span></div>
 
             {/* Available NFTs, to be staked */}
             <Carousel
@@ -395,17 +395,17 @@ const Farm = ({ id }: FarmProps) => {
         </section>
 
         <Modal className='text-slate-700 relative' isOpen={isModalOpen} onClose={handleCloseModal}>
-          <div className='text-center'>
+          <div className='text-center grid gap-2'>
             <div className='my-5 text-xl'>Stake NFT ID {id}</div>
             <div className='my-2'>
               <div className='grid grid-cols-7 gap-5 my-7 px-2 text-xs md:text-sm'>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>{'<'}</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>7</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>33</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>12</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>52</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>100</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>{'>'}</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>{'<'}</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>7</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>33</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>12</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>52</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>100</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] px-2 py-3 md:py-3 md:px-2 whitespace-nowrap'>{'>'}</button>
               </div>
               {/* <div>
                 <input type='text' className='' placeholder=''/>
@@ -413,7 +413,7 @@ const Farm = ({ id }: FarmProps) => {
               <Button className='!w-full'>Select All</Button>
             </div>
 
-            <div className='grid gap-5 mt-5'>
+            <div className='grid gap-7 mt-3'>
               <span className='text-left pl-3 text-xs opacity-70'>Annual ROI at current rates: $0.00</span>
               <div className='grid grid-cols-3'>
                 <button className='rounded-xl float-left px-2 py-3 text-sm bg-[#EC1F38]' onClick={handleCloseModal}>Cancel</button>
