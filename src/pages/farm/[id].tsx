@@ -392,7 +392,7 @@ const Farm = ({ id }: FarmProps) => {
 
         <Modal className='text-slate-700 relative' isOpen={isModalOpen} onClose={handleCloseModal}>
           <div className='text-center'>
-            <div className='my-5 text-xl'>Stake NFTx</div>
+            <div className='my-5 text-xl'>Stake NFT ID{id}</div>
             <div className='my-2'>
               <div className='grid grid-cols-7 gap-5 my-7 px-2 text-xs md:text-sm'>
                 <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>{'<'}</button>
