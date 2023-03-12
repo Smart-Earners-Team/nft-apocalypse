@@ -160,6 +160,7 @@ const Farm = ({ id }: FarmProps) => {
 
             <div className='text-center font-bold text-2xl py-2 px-2'>Staked</div>
 
+            {/* Staked NFTs */}
             <Carousel
               autoPlay={false}
               additionalTransfrom={0}
@@ -220,7 +221,7 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
+                  <div className='text-md px-1'>Majestic APO 294</div>
                   <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
@@ -235,7 +236,7 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
+                  <div className='text-md px-1'>Majestic APO 294</div>
                   <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
@@ -250,7 +251,7 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
+                  <div className='text-md px-1'>Majestic APO 294</div>
                   <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
@@ -265,7 +266,7 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
+                  <div className='text-md px-1'>Majestic APO 294</div>
                   <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
@@ -273,6 +274,9 @@ const Farm = ({ id }: FarmProps) => {
 
             </Carousel>
 
+            <div className='text-center font-bold text-2xl py-2 px-2'>Available</div>
+
+            {/* Available NFTs, to be staked */}
             <Carousel
               autoPlay={false}
               additionalTransfrom={0}
@@ -333,8 +337,8 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <div className='text-md px-1'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
@@ -348,8 +352,8 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <div className='text-md px-1'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
@@ -363,8 +367,8 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <div className='text-md px-1'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
@@ -378,8 +382,8 @@ const Farm = ({ id }: FarmProps) => {
                 </div>
 
                 <div className='my-3 grid justify-center'>
-                  <div className='text-md'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <div className='text-md px-1'>Majestic APO 294</div>
+                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
@@ -392,16 +396,16 @@ const Farm = ({ id }: FarmProps) => {
 
         <Modal className='text-slate-700 relative' isOpen={isModalOpen} onClose={handleCloseModal}>
           <div className='text-center'>
-            <div className='my-5 text-xl'>Stake NFT ID{id}</div>
+            <div className='my-5 text-xl'>Stake NFT ID {id}</div>
             <div className='my-2'>
               <div className='grid grid-cols-7 gap-5 my-7 px-2 text-xs md:text-sm'>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>{'<'}</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>7</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>33</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>12</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>52</button>
-                <button className='text-center rounded-2xl ring ring-[#EC1F38] py-3 px-2'>100</button>
-                <button className='text-center rounded-2xl ring ring-[#01A4F0] py-3 px-2'>{'>'}</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>{'<'}</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>7</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>33</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>12</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>52</button>
+                <button className='text-center rounded-2xl ring ring-[#EC1F38] p-2 md:p-3 whitespace-nowrap'>100</button>
+                <button className='text-center rounded-2xl ring ring-[#01A4F0] p-2 md:p-3 whitespace-nowrap'>{'>'}</button>
               </div>
               {/* <div>
                 <input type='text' className='' placeholder=''/>
@@ -418,7 +422,7 @@ const Farm = ({ id }: FarmProps) => {
               </div>
             </div>
           </div>
-          <FaTimes className='cursor-pointer absolute top-5 right-5' onClick={handleCloseModal} />
+          {/* <FaTimes className='cursor-pointer absolute top-5 right-5' onClick={handleCloseModal} /> */}
         </Modal>
 
       </Layout>
