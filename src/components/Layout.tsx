@@ -5,14 +5,12 @@ import { AppWrapper } from './AppWrapper';
 import { ThemeSwitch } from './Tools/ThemeSwitch';
 import { GlobalTypes } from '../globals';
 import { FarmNavbar } from './Navigation/FarmNavbar';
-import { StakeNavbar } from './Navigation/StakeNavbar';
 
 const Layout:React.FC<GlobalTypes> = ( {
     children,
     navbar,
     footer,
     farmNavbar,
-    stakeNavbar
 } ) => (
 
     <AppWrapper className='min-h-screen'>
@@ -31,10 +29,6 @@ const Layout:React.FC<GlobalTypes> = ( {
 
         {
             farmNavbar ? <FarmNavbar /> : null
-        }
-
-        {
-            stakeNavbar ? <StakeNavbar /> : null
         }
 
         <div className='relative z-0'>
