@@ -89,11 +89,11 @@ const Farm = ({ id }: FarmProps) => {
         <section className='pb-2 z-0'>
 
           <div className='h-[300px] md:h-[380px] w-full justify-items-center overflow-hidden'>
-            <GatsbyImage image={bgImage!} alt='' className='w-full opacity-90 rounded-lg -top-[50%] md:-top-[80%] -z-[9999] blur-sm md:blur-md' />
+            <GatsbyImage image={bgImage!} alt='' className='w-full opacity-90 rounded-lg -top-[50%] md:-top-[80%] z-0 blur-sm md:blur-md' />
           </div>
 
           <div className='h-fit absolute top-[165px] md:top-[250px] left-[10%] w-[30%] md:w-[20%] rounded-[30px] md:rounded-[60px] bg-cover bg-gradient-to-b from-[#887d748b] to-[#FECEA3] p-2'>
-            <GatsbyImage image={bgImage!} alt='' className='rounded-[30px] md:rounded-[60px]' />
+            <GatsbyImage image={bgImage!} alt='' className='rounded-[40px] md:rounded-[70px]' />
           </div>
 
           <div className='absolute top-[35px] right-[15%] py-8 md:py-16 z-0'>
@@ -110,7 +110,7 @@ const Farm = ({ id }: FarmProps) => {
 
         </section>
 
-        <section className='mt-[0px] md:mt-[130px] px-[12%] py-2 z-0'>
+        <section className='mt-[0px] md:mt-[175px] px-[12%] py-2 z-0'>
 
           <div className='grid gap-5'>
             <div className='flex flex-wrap gap-x-8 text-xl my-2'>
@@ -142,9 +142,9 @@ const Farm = ({ id }: FarmProps) => {
 
             <div className='flex'>
 
-              <Button title='Stake' className='!text-inherit !bg-[#89DAF3]/20' />
-              <Button title='Unstake' className='!text-inherit !bg-[#89DAF3]/20' />
-              <Button title='Harvest' className='!text-inherit !bg-[#89DAF3]/20' />
+              <button onClick={handleOpenModal} className='text-inherit bg-[#89DAF3]/20 px-5 py-2 m-2 rounded-xl'>Stake</button>
+              <button onClick={handleOpenModal} className='text-inherit bg-[#89DAF3]/20 px-5 py-2 m-2 rounded-xl'>Unstake</button>
+              <button className='text-inherit bg-[#89DAF3]/20 px-5 py-2 m-2 rounded-xl'>Harvest</button>
               
             </div>
 
@@ -214,60 +214,44 @@ const Farm = ({ id }: FarmProps) => {
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
@@ -330,60 +314,44 @@ const Farm = ({ id }: FarmProps) => {
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
 
               <div className='border border-inherit rounded-3xl p-3 relative mx-2'>
 
-                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl blur-[2px]' />
-
-                <div className='rounded-xl h-fit absolute top-6 right-5 w-[45px] md:w-[50px] bg-cover bg-gradient-to-b from-[#89daf374] to-[#89DAF3] p-1'>
-                  <GatsbyImage image={apeImage!} alt='' className='rounded-xl' />
-                </div>
+                <GatsbyImage image={apeImage!} alt='' className='rounded-3xl' />
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button onClick={handleOpenModal} className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
                 </div>
 
               </div>
