@@ -218,7 +218,7 @@ const Farm = ({ id }: FarmProps) => {
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
               </div>
@@ -229,7 +229,7 @@ const Farm = ({ id }: FarmProps) => {
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
               </div>
@@ -240,7 +240,7 @@ const Farm = ({ id }: FarmProps) => {
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
               </div>
@@ -251,7 +251,7 @@ const Farm = ({ id }: FarmProps) => {
 
                 <div className='my-3 grid justify-center'>
                   <div className='text-md px-1'>Majestic APO 294</div>
-                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Stake</button>
+                  <button className='text-sm px-5 py-3 ring-1 ring-slate-500 rounded-lg m-3'>Unstake</button>
                 </div>
 
               </div>
